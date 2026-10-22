@@ -4,96 +4,76 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nila — Aviv Navot</title>
+<meta name="description" content="Nila: a website for an independent aesthetician, with treatments, a before-and-after gallery, a shop and a skin diagnosis tool. Web design by Aviv Navot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css?v=27">
 </head>
-<body data-title-en="Nila — Aviv Navot" data-title-he="נילה | אביב נבות">
+<body class="cs" data-title-en="Nila — Aviv Navot">
 
   <header class="nav">
     <div class="nav-inner">
       <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links" id="navLinks">
-        <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-        <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
+        <a href="../index.html#work"><span class="en">Work</span></a>
+        <a href="../about.html"><span class="en">About</span></a>
+        <a href="../resume.html"><span class="en">Resume</span></a>
       </nav>
-
-      <div class="lang-toggle" role="group" aria-label="Language switch">
-        <button data-lang-btn="en" class="active">EN</button>
-        <span class="sep">/</span>
-        <button data-lang-btn="he">HE</button>
-      </div>
     </div>
   </header>
 
-  <section class="project-hero">
-    <div class="wrap">
-      <div class="breadcrumb reveal in">
-        <a href="../index.html"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <span>/</span>
-        <span>Nila</span>
-      </div>
-      <div class="project-head reveal in">
-        <span class="eyebrow"><span class="en">Website Design for an Aesthetician</span><span class="he">עיצוב אתר לקוסמטיקאית</span></span>
-        <h1>Nila</h1>
-        <p class="lede">
-          <span class="en">A website project for an independent aesthetician, built to project warm, personal professionalism from the very first click.</span>
-          <span class="he">פרויקט עיצוב אתר עבור קוסמטיקאית עצמאית, שנבנה כדי לשדר מקצועיות חמה ואישית כבר מהרגע הראשון.</span>
-        </p>
-      </div>
+  <main>
 
-      <div class="specs reveal in">
-        <div class="spec">
-          <span class="k"><span class="en">Role</span><span class="he">תפקיד</span></span>
-          <span class="v"><span class="en">Web Designer</span><span class="he">מעצבת אתר</span></span>
-        </div>
-        <div class="spec">
-          <span class="k"><span class="en">Category</span><span class="he">קטגוריה</span></span>
-          <span class="v"><span class="en">Beauty &amp; Aesthetics</span><span class="he">יופי וטיפוח</span></span>
-        </div>
-        <div class="spec">
-          <span class="k"><span class="en">Deliverables</span><span class="he">תוצרים</span></span>
-          <span class="v list">
-            <span><span class="en">Website design</span><span class="he">עיצוב אתר</span></span>
-            <span><span class="en">E-commerce</span><span class="he">חנות מקוונת</span></span>
-            <span><span class="en">Skin diagnosis tool</span><span class="he">אבחון עור</span></span>
-          </span>
-        </div>
+  <section class="cs-hero">
+    <div class="cs-aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="cs-text">
+      <h1 data-words>
+        <span class="en">Trust, before<br><em>the first visit.</em></span>
+      </h1>
+      <p class="cs-hero-sub reveal"><span class="en">A website for an independent aesthetician.</span></p>
+      <p class="cs-lede"><span class="en">The goal was a digital presence that feels warm, personal and professional, reflects the practitioner's character and builds trust before the first appointment.</span></p>
+    </div>
+    <div class="cs-media">
+      <figure class="cs-figure cs-hero-figure reveal"><img src="../images/nila/hero.jpg" alt="The Nila website homepage on a laptop" fetchpriority="high"></figure>
+      <div class="cs-meta m3 reveal">
+        <div><span class="cs-label"><span class="en">Role</span></span><span class="v"><span class="en">Web Designer</span></span></div>
+        <div><span class="cs-label"><span class="en">Category</span></span><span class="v"><span class="en">Beauty &amp; Aesthetics</span></span></div>
+        <div><span class="cs-label"><span class="en">Deliverables</span></span><span class="v accent"><span class="en">Website, e-commerce, skin diagnosis tool</span></span></div>
       </div>
     </div>
   </section>
 
-  <section class="project-body">
-    <div class="wrap">
-      <div class="prose reveal">
-        <p>
-          <span class="en">The goal was to build a digital presence that conveys warm, personal professionalism — one that reflects the practitioner's unique character and builds trust before the first visit even begins.</span>
-          <span class="he">המטרה הייתה לבנות נוכחות דיגיטלית שמשדרת מקצועיות חמה ואישית, כזו שמשקפת את האופי הייחודי של המטפלת ויוצרת אמון עוד לפני הביקור הראשון.</span>
-        </p>
-        <p>
-          <span class="en">The site includes treatment pages with detailed descriptions, a before-and-after gallery, a shop for purchasing products, and a skin diagnosis tool. Visually, the design rests on an aesthetic that balances elegant sophistication with human warmth.</span>
-          <span class="he">האתר כולל דפי טיפולים עם תיאורים מפורטים, גלריית לפני ואחרי, חנות מוצרים לרכישה ואבחון עור. מבחינה ויזואלית, העיצוב נשען על אסתטיקה שמאזנת בין תחכום אלגנטי לחום אנושי.</span>
-        </p>
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-red" style="--fd:-0.9s" aria-hidden="true"><span class="pane"><span>01</span></span></span>
+        <div><span class="cs-pill"><span class="en">The site</span></span></div>
+        <h2 class="cs-h2"><span class="en">Elegant, <em>and still human.</em></span></h2>
+        <p class="cs-lede"><span class="en">The site includes treatment pages with detailed descriptions, a before-and-after gallery, a shop for skincare products and a skin diagnosis tool. Visually, it balances elegant sophistication with human warmth, in nude tones and a muted grey-green.</span></p>
       </div>
-
-      <div class="gallery reveal">
-        <figure class="g-wide"><img src="../images/nila/hero.jpg" alt="Nila aesthetics clinic homepage on laptop"></figure>
-        <figure class="g-half"><img src="../images/nila/devices.jpg" alt="Nila product page on tablet and phone"></figure>
-        <figure class="g-half"><img src="../images/nila/multi.jpg" alt="Nila website — multiple pages on laptop and floating screens"></figure>
+    </div>
+    <div class="cs-media" style="margin-top:clamp(40px,5vw,72px)">
+      <div class="cs-grid">
+        <figure class="cs-figure s12 reveal"><img src="../images/nila/devices.jpg" alt="Nila product page on tablet and phone" loading="lazy"></figure>
+        <figure class="cs-figure s12 reveal"><img src="../images/nila/multi.jpg" alt="Nila website: several pages on a laptop and floating screens" loading="lazy"></figure>
       </div>
     </div>
   </section>
+
+  <section class="cs-sec" style="padding-top:0">
+    <p class="cs-closing reveal"><span class="en">Skin first. <em>People always.</em></span></p>
+  </section>
+
+  </main>
 
   <section class="next-project">
     <div class="wrap">
-      <span class="label"><span class="en">Next project</span><span class="he">הפרויקט הבא</span></span>
+      <span class="label"><span class="en">Next project</span></span>
       <a href="pinch.html" class="next-card reveal">
         <h3>Pinch</h3>
         <span class="arrow">→</span>
@@ -101,25 +81,29 @@
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
+  <footer class="cta-foot" id="contact">
+    <div class="cta-card reveal">
+      <span class="cta-aura" aria-hidden="true"></span>
+      <h2 class="cta-title">Don't be <em>a stranger.</em></h2>
+      <button type="button" class="cta-mail" data-copy="Aviv.navot@gmail.com" aria-label="Copy my email address: Aviv.navot@gmail.com">
+        <span class="addr">Aviv.navot@gmail.com</span>
+        <span class="cta-tip" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="lbl">Copy</span></span>
+      </button>
+      <a class="cta-phone" href="tel:0544420666">054-4420666</a>
+      <div class="cta-bottom">
         <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-        <div class="footer-links">
-          <a href="mailto:Aviv.navot@gmail.com">Aviv.navot@gmail.com</a>
-          <a href="tel:0544420666">054-4420666</a>
-          <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-          <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-          <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
-        </div>
+        <nav class="cta-links" aria-label="Footer">
+          <a href="../index.html#work">Work</a>
+          <a href="../about.html">About</a>
+          <a href="../resume.html">Resume</a>
+          <a href="https://www.linkedin.com/in/aviv-navot-5a4806437" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="cta-note">© 2026 Aviv Navot</span>
       </div>
-      <p class="footer-note">
-        <span class="en">© 2026 Aviv Navot. Portfolio designed &amp; built with care.</span>
-        <span class="he">© 2026 אביב נבות. הפורטפוליו עוצב ונבנה בקפידה.</span>
-      </p>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/case-study.js?v=27"></script>
 </body>
 </html>

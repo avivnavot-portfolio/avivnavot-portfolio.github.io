@@ -17,16 +17,11 @@
   }
 
   function initLang() {
-    var saved = null;
-    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-    var lang = saved || document.documentElement.getAttribute("lang") || "en";
-    applyLang(lang);
+    /* The portfolio is English only. */
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+    applyLang("en");
 
-    document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        applyLang(btn.getAttribute("data-lang-btn"));
-      });
-    });
+
   }
 
   function initReveal() {

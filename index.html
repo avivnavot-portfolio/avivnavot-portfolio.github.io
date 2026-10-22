@@ -4,250 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Aviv Navot — Visual &amp; Product Designer</title>
-<meta name="description" content="Aviv Navot — visual designer specializing in branding, UI/UX and creative direction.">
+<meta name="description" content="Aviv Navot, visual and product designer: branding, UI/UX and digital products.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/case-study.css?v=29">
+<link rel="stylesheet" href="css/home.css?v=3">
 </head>
-<body data-title-en="Aviv Navot — Visual &amp; Product Designer" data-title-he="אביב נבות | מעצבת חזותית ומוצר">
+<body class="cs home" data-title-en="Aviv Navot — Visual &amp; Product Designer">
 
-  <!-- NAV -->
-  <header class="nav nav--on-hero" id="siteNav">
+  <!-- living background -->
+  <div class="hm-sky" aria-hidden="true"><div class="hm-orbit"><i></i><i></i><i></i><i></i><i></i></div></div>
+
+  <header class="nav">
     <div class="nav-inner">
       <a href="index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links" id="navLinks">
-        <a href="#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <a href="about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-        <a href="contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
+        <a href="#work"><span class="en">Work</span></a>
+        <a href="about.html"><span class="en">About</span></a>
+        <a href="resume.html"><span class="en">Resume</span></a>
       </nav>
-
-      <div class="lang-toggle" role="group" aria-label="Language switch">
-        <button data-lang-btn="en" class="active">EN</button>
-        <span class="sep">/</span>
-        <button data-lang-btn="he">HE</button>
-      </div>
     </div>
   </header>
 
-  <!-- HERO COVER -->
-  <section class="hero-cover">
-    <svg class="hero-flower f1" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f2" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f3" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f4" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f5" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f6" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f7" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
-    <svg class="hero-flower f8" viewBox="0 0 100 100" aria-hidden="true"><g fill="var(--blush)"><ellipse cx="50" cy="24" rx="15" ry="22"/><ellipse cx="50" cy="76" rx="15" ry="22"/><ellipse cx="24" cy="50" rx="22" ry="15"/><ellipse cx="76" cy="50" rx="22" ry="15"/></g><rect x="41" y="41" width="18" height="18" rx="5" fill="var(--wine)" transform="rotate(45 50 50)"/></svg>
+  <main>
 
-    <div class="hero-cover-inner">
-      <p class="hero-hand">
-        <span class="en">Hi! I'm Aviv, and this is my designer</span>
-        <span class="he">היי אני אביב, וזה</span>
-      </p>
-      <h1 class="hero-big">
-        <span class="en">Portfolio</span>
-        <span class="he">תיק העבודות שלי</span>
+  <!-- ================= HERO ================= -->
+  <section class="hm-hero" id="top">
+    <div class="hm-hero-text">
+      <h1 class="hm-title">
+        <span class="hm-hello" data-lift>Hello!</span>
+        <span class="hm-name" data-lift>I’m Aviv</span>
       </h1>
-      <p class="hero-sign">Aviv Navot · 2026</p>
+      <p class="hm-note" data-lift>*this is my portfolio :)</p>
     </div>
-
-    <img class="hero-photo" src="images/aviv-photo.webp" alt="Aviv Navot">
-
-    <div class="hero-curve"></div>
+    <div class="hm-dots" aria-hidden="true"></div>
   </section>
 
-  <!-- ABOUT TEASER -->
-  <section class="about-teaser">
-    <div class="wrap">
-      <div class="about-teaser-head reveal">
-        <span class="eyebrow"><span class="en">About Me</span><span class="he">קצת עליי</span></span>
-      </div>
-      <div class="about-teaser-copy reveal">
-        <p>
-          <span class="en">Hi! I'm Aviv, 24 years old, from Herzliya. I'm a visual designer with a great passion for branding that excites, for storytelling, and for creating digital experiences that feel alive, intuitive and unforgettable. I love taking a small idea and turning it into a whole world, with a strong language and a precise look that's hard to ignore.</span>
-          <span class="he">היי! אני אביב, בת 24 מהרצליה. אני מעצבת חזותית עם תשוקה גדולה למיתוג שמרגש, לסטוריטלינג וליצירת חוויות דיגיטליות שמרגישות חיות, אינטואיטיביות ובלתי נשכחות. אני אוהבת לקחת רעיון קטן ולהפוך אותו לעולם שלם, עם שפה חזקה ומראה מדוייק שקשה להתעלם ממנו.</span>
-        </p>
-      </div>
-      <div class="about-teaser-actions reveal">
-        <a href="about.html" class="link-arrow">
-          <span class="en">My full story, tools &amp; contact</span><span class="he">הסיפור המלא, כלים ויצירת קשר</span>
-          <span class="a">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- ================= WORK ================= -->
+  <section class="hm-work" id="work" aria-label="Selected work">
+    <div class="hm-stack">
 
-  <!-- WORK / PROJECT CHAPTERS -->
-  <section class="section" id="work" style="padding-bottom:0;">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2><span class="en">My Projects</span><span class="he">הפרוייקטים שלי</span></h2>
-      </div>
-    </div>
-
-    <div class="proj-list">
-
-      <!-- PINCH -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/pinch.html" aria-label="Pinch">
-          <div class="proj-media">
-            <img src="images/pinch/cover.jpg" alt="Pinch — AI cooking app landing page and mobile screens">
-            <span class="proj-index">01</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">AI Product</span><span class="he">מוצר AI</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Pinch</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">Branding</span><span class="he">מיתוג</span></li>
-                <li><span class="en">App UI/UX</span><span class="he">עיצוב אפליקציה</span></li>
-                <li><span class="en">Packaging</span><span class="he">אריזה</span></li>
-              </ul>
-            </div>
+      <article class="hm-slot">
+        <a class="hm-card hm-pinch" href="projects/pinch.html" style="--card:#D03E30; --ink:#FFFCF5;">
+          <div class="hm-info">
+            <span class="hm-tag">UI/UX · AI product</span>
+            <h2 class="hm-name-p">Pinch</h2>
+            <p class="hm-desc">An AI cooking companion built around real Israeli chefs.</p>
+            <span class="hm-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+          <div class="hm-media hm-phones" aria-hidden="true">
+            <div class="hm-phone p-l"><img src="images/pinch/v2/screen-chefs.jpg" alt="" loading="lazy"></div>
+            <div class="hm-phone p-c"><img src="images/pinch/v2/screen-home.jpg" alt=""></div>
+            <div class="hm-phone p-r"><img src="images/pinch/v2/screen-chat.jpg" alt="" loading="lazy"></div>
           </div>
         </a>
       </article>
 
-      <!-- BLUME & CO -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/blume-and-co.html" aria-label="Blume & Co">
-          <div class="proj-media">
-            <img src="images/blume/hero.jpg" alt="Blume & Co — boutique flower branding">
-            <span class="proj-index">02</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">Boutique Branding</span><span class="he">מיתוג בוטיק</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Blume &amp; Co</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">Brand identity</span><span class="he">זהות מותגית</span></li>
-                <li><span class="en">Packaging</span><span class="he">אריזה</span></li>
-                <li><span class="en">App design</span><span class="he">עיצוב אפליקציה</span></li>
-              </ul>
-            </div>
+      <article class="hm-slot">
+        <a class="hm-card" href="projects/kiddoz.html" style="--card:#F8E4EF; --ink:#35363B;">
+          <div class="hm-info">
+            <span class="hm-tag">UI/UX design</span>
+            <h2 class="hm-name-p">Kiddoz</h2>
+            <p class="hm-desc">An app that helps parents discover activities for their kids.</p>
+            <span class="hm-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </div>
+          <div class="hm-media hm-phones hm-air" aria-hidden="true">
+            <div class="hm-phone k-a"><img src="images/kiddoz/onboarding-2.jpg" alt="" loading="lazy"></div>
+            <div class="hm-phone k-b"><img src="images/kiddoz/onboarding-1.jpg" alt="" loading="lazy"></div>
           </div>
         </a>
       </article>
 
-      <!-- KIDDOZ -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/kiddoz.html" aria-label="Kiddoz">
-          <div class="proj-media">
-            <img src="images/kiddoz/intro.jpg" alt="Kiddoz — kids' activity discovery app">
-            <span class="proj-index">03</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">UX Design</span><span class="he">עיצוב UX</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Kiddoz</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">UX research</span><span class="he">מחקר UX</span></li>
-                <li><span class="en">App UI</span><span class="he">ממשק אפליקציה</span></li>
-                <li><span class="en">AI assistant</span><span class="he">עוזר AI</span></li>
-              </ul>
-            </div>
+      <article class="hm-slot">
+        <a class="hm-card" href="projects/blume-and-co.html" style="--card:#641039; --ink:#FBEFF4;">
+          <div class="hm-info">
+            <span class="hm-tag">UI/UX · Brand identity</span>
+            <h2 class="hm-name-p">Blume &amp; Co</h2>
+            <p class="hm-desc">A boutique flower and gifting brand, from identity to packaging and app.</p>
+            <span class="hm-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
+          <div class="hm-media"><img src="images/blume/hero.jpg" alt="Blume &amp; Co logo on a bed of burgundy flowers" loading="lazy"></div>
         </a>
       </article>
 
-      <!-- RAMI PORTIS -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/rami-portis.html" aria-label="Rami Portis">
-          <div class="proj-media">
-            <img src="images/rami/vinyl.jpg" alt="Rami Portis — album redesign">
-            <span class="proj-index">04</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">Artist Branding</span><span class="he">מיתוג לאמן</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Rami Portis</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">Album art</span><span class="he">עיצוב אלבום</span></li>
-                <li><span class="en">Print design</span><span class="he">עיצוב דפוס</span></li>
-                <li><span class="en">Concept</span><span class="he">קונספט</span></li>
-              </ul>
-            </div>
+      <article class="hm-slot">
+        <a class="hm-card" href="projects/jaco.html" style="--card:#A7DEE7; --ink:#35363B;">
+          <div class="hm-info">
+            <span class="hm-tag">Product &amp; packaging</span>
+            <h2 class="hm-name-p">Jaco</h2>
+            <p class="hm-desc">An educational board game, from game design to the box.</p>
+            <span class="hm-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </div>
-        </a>
-      </article>
-
-      <!-- JACO -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/jaco.html" aria-label="Jaco">
-          <div class="proj-media">
-            <img src="images/jaco/box.jpg" alt="Jaco — educational board game design">
-            <span class="proj-index">05</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">Product &amp; Packaging</span><span class="he">מוצר ואריזה</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Jaco</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">Game design</span><span class="he">עיצוב משחק</span></li>
-                <li><span class="en">Packaging</span><span class="he">אריזה</span></li>
-              </ul>
-            </div>
-          </div>
-        </a>
-      </article>
-
-      <!-- NILA -->
-      <article class="proj-row">
-        <a class="proj-link" href="projects/nila.html" aria-label="Nila">
-          <div class="proj-media">
-            <img src="images/nila/hero.jpg" alt="Nila — aesthetics clinic website design">
-            <span class="proj-index">06</span>
-            <div class="proj-overlay">
-              <span class="proj-kicker"><span class="en">Web Design</span><span class="he">עיצוב אתר</span></span>
-              <div class="proj-title-row">
-                <h3 class="proj-heading">Nila</h3>
-                <span class="proj-arrow">→</span>
-              </div>
-              <ul class="proj-specialties">
-                <li><span class="en">Web design</span><span class="he">עיצוב אתר</span></li>
-                <li><span class="en">E-commerce</span><span class="he">חנות מקוונת</span></li>
-                <li><span class="en">Art direction</span><span class="he">ארט דיירקשן</span></li>
-              </ul>
-            </div>
-          </div>
+          <div class="hm-media"><img src="images/jaco/box.jpg" alt="The Jaco board game box" loading="lazy"></div>
         </a>
       </article>
 
     </div>
   </section>
 
-  <!-- FOOTER / CONTACT -->
-  <footer class="site-footer" id="contact">
-    <div class="wrap">
-      <div class="footer-grid">
+  </main>
+
+  <footer class="cta-foot" id="contact">
+    <div class="cta-card reveal">
+      <span class="cta-aura" aria-hidden="true"></span>
+      <h2 class="cta-title">Don't be <em>a stranger.</em></h2>
+      <button type="button" class="cta-mail" data-copy="Aviv.navot@gmail.com" aria-label="Copy my email address: Aviv.navot@gmail.com">
+        <span class="addr">Aviv.navot@gmail.com</span>
+        <span class="cta-tip" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="lbl">Copy</span></span>
+      </button>
+      <a class="cta-phone" href="tel:0544420666">054-4420666</a>
+      <div class="cta-bottom">
         <a href="index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-        <div class="footer-links">
-          <a href="mailto:Aviv.navot@gmail.com">Aviv.navot@gmail.com</a>
-          <a href="tel:0544420666">054-4420666</a>
-          <a href="#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-          <a href="about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-          <a href="contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
-        </div>
+        <nav class="cta-links" aria-label="Footer">
+          <a href="index.html#work">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="https://www.linkedin.com/in/aviv-navot-5a4806437" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="cta-note">© 2026 Aviv Navot</span>
       </div>
-      <p class="footer-note">
-        <span class="en">© 2026 Aviv Navot. Portfolio designed &amp; built with care.</span>
-        <span class="he">© 2026 אביב נבות. הפורטפוליו עוצב ונבנה בקפידה.</span>
-      </p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/case-study.js?v=27"></script>
+  <script src="js/home.js?v=3"></script>
 </body>
 </html>

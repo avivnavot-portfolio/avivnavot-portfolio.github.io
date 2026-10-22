@@ -130,7 +130,7 @@ html[lang="he"] .eyebrow::after{
   white-space:nowrap;
 }
 html[lang="he"] .brand{ font-family:'Heebo',sans-serif; }
-.brand .dot{ color:var(--green-700); font-size:24px; line-height:0; }
+.brand .dot{ color:var(--green-700); font-size:36px; line-height:0; margin-left:-.17em; }
 
 .nav-links{
   display:flex;
@@ -797,3 +797,6 @@ html[lang="he"] a.contact-card:hover .contact-card-arrow{ transform:scaleX(-1) t
 /* reveal-on-scroll */
 .reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.in{ opacity:1; transform:translateY(0); }
+
+/* English-only portfolio: language switch removed */
+.lang-toggle{ display:none !important; }

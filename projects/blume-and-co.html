@@ -4,133 +4,417 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blume &amp; Co — Aviv Navot</title>
+<meta name="description" content="Blume &amp; Co: a boutique flower and lifestyle brand, and B&amp;C, the app that makes luxury gifting worry-free. Branding, UX research and app design by Aviv Navot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css?v=30">
+<link rel="preload" as="image" href="../images/blume/v2/onboarding-poster.jpg">
 </head>
-<body data-title-en="Blume &amp; Co — Aviv Navot" data-title-he="בלום אנד קו | אביב נבות">
+<body class="cs bc" data-title-en="Blume &amp; Co — Aviv Navot">
 
   <header class="nav">
     <div class="nav-inner">
       <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links" id="navLinks">
-        <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-        <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
+        <a href="../index.html#work"><span class="en">Work</span></a>
+        <a href="../about.html"><span class="en">About</span></a>
+        <a href="../resume.html"><span class="en">Resume</span></a>
       </nav>
-
-      <div class="lang-toggle" role="group" aria-label="Language switch">
-        <button data-lang-btn="en" class="active">EN</button>
-        <span class="sep">/</span>
-        <button data-lang-btn="he">HE</button>
-      </div>
     </div>
   </header>
 
-  <section class="project-hero">
-    <div class="wrap">
-      <div class="breadcrumb reveal in">
-        <a href="../index.html"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <span>/</span>
-        <span>Blume &amp; Co</span>
-      </div>
-      <div class="project-head reveal in">
-        <span class="eyebrow"><span class="en">Boutique Flower Branding</span><span class="he">מיתוג בוטיק פרחים</span></span>
-        <h1>Blume &amp; Co <span style="font-size:0.5em; color:var(--ink-soft); font-weight:400;">— <span class="en">Eternal Spring</span><span class="he">אביב נצחי</span></span></h1>
-        <p class="lede">
-          <span class="en">A boutique brand for flowers and lifestyle products, born from a passion for the art of giving and the human desire to offer a gift.</span>
-          <span class="he">מותג בוטיק לפרחים ומוצרי לייף סטייל, שנולד מתוך תשוקה גדולה לאמנות הנתינה והרצון האנושי להעניק מתנה.</span>
-        </p>
-      </div>
+  <main>
 
-      <div class="specs reveal in">
-        <div class="spec">
-          <span class="k"><span class="en">Role</span><span class="he">תפקיד</span></span>
-          <span class="v"><span class="en">Brand Designer</span><span class="he">מעצבת מותג</span></span>
+  <!-- ================= HERO ================= -->
+  <section class="cs-hero">
+    <div class="cs-aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="cs-text">
+      <h1 data-words>
+        <span class="en">A gift that lingers.<br><em>Eternal spring.</em></span>
+      </h1>
+      <p class="cs-hero-sub reveal"><span class="en">A boutique flower and lifestyle brand, and the app that makes gifting worry-free.</span></p>
+      <p class="cs-lede">
+        <span class="en">Blume &amp; Co treats flowers as an experience rather than decoration, and gifting as an intentional act rather than a social obligation. I built the brand from its strategy to its packaging, and designed B&amp;C, its own app for sending luxury gifts with confidence: what you see on the screen is exactly what arrives, exactly on time.</span>
+      </p>
+    </div>
+    <div class="cs-media">
+      <div class="bc-stage reveal" role="img" aria-label="The B&amp;C app onboarding playing on an iPhone, with flowers around it">
+        <img class="bc-fl kz-out f1" src="../images/blume/v2/flower-peony.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f2" src="../images/blume/v2/flower-ranunculus.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f3" src="../images/blume/v2/flower-dahlia.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f4" src="../images/blume/v2/flower-hydrangea.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f5" src="../images/blume/v2/flower-rose.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f6" src="../images/blume/v2/flower-orchid.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f7" src="../images/blume/v2/flower-anemone.webp" alt="" aria-hidden="true">
+        <img class="bc-fl kz-out f8" src="../images/blume/v2/flower-orchid-green.webp" alt="" aria-hidden="true">
+        <div class="kz-phone kz-c bc-phone">
+          <video autoplay muted loop playsinline preload="auto" poster="../images/blume/v2/onboarding-poster.jpg">
+            <source src="../images/blume/v2/blume-onboarding.mp4" type="video/mp4">
+            <source src="../images/blume/v2/blume-onboarding.webm" type="video/webm">
+          </video>
         </div>
-        <div class="spec">
-          <span class="k"><span class="en">Category</span><span class="he">קטגוריה</span></span>
-          <span class="v"><span class="en">Lifestyle · Florist</span><span class="he">לייף סטייל · פרחים</span></span>
+      </div>
+      <div class="cs-meta reveal">
+        <div><span class="cs-label"><span class="en">Role</span></span><span class="v"><span class="en">Brand &amp; Product Designer, end to end</span></span></div>
+        <div><span class="cs-label"><span class="en">Category</span></span><span class="v"><span class="en">Florist · Lifestyle · Gifting</span></span></div>
+        <div><span class="cs-label"><span class="en">Deliverables</span></span><span class="v"><span class="en">Brand book, packaging, iOS app</span></span></div>
+        <div><span class="cs-label"><span class="en">Methods</span></span><span class="v accent"><span class="en">Interviews, competitive analysis, HMW</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 1 THE BRAND ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-red" style="--fd:-0.9s" aria-hidden="true"><span class="pane"><span>01</span></span></span>
+        <div><span class="cs-pill"><span class="en">The brand</span></span></div>
+        <h2 class="cs-h2"><span class="en">Beauty, not despite being fleeting. <em>Because of it.</em></span></h2>
+        <p class="cs-lede"><span class="en">Like the Japanese love for cherry blossoms, Blume &amp; Co embraces beauty because it doesn't last. Each bouquet and lifestyle piece is designed to turn a passing moment into a lasting memory.</span></p>
+      </div>
+      <div class="cs-two">
+        <div class="cs-card cs-goal reveal">
+          <span class="who"><span class="en">Vision</span></span>
+          <p><span class="en">A world where flowers are moments, not decoration, and gifting is guided by intention.</span></p>
         </div>
-        <div class="spec">
-          <span class="k"><span class="en">Deliverables</span><span class="he">תוצרים</span></span>
-          <span class="v list">
-            <span><span class="en">Brand identity</span><span class="he">זהות מותגית</span></span>
-            <span><span class="en">Packaging</span><span class="he">אריזה</span></span>
-            <span><span class="en">Delivery app</span><span class="he">אפליקציית משלוחים</span></span>
-          </span>
+        <div class="cs-card cs-goal reveal">
+          <span class="who"><span class="en">Mission</span></span>
+          <p><span class="en">Floral arrangements and lifestyle pieces that turn gifting into a meaningful experience.</span></p>
+        </div>
+      </div>
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">The name <em>and the promise</em></span></h3>
+        <div class="cs-acc reveal">
+          <details open><summary><span class="n">01</span><span class="t"><span class="en">Blume &amp; Co</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">"Blume" means flower in German. "&amp; Co" opens the name beyond bouquets, into a lifestyle world shaped by design, emotion and intention.</span></div></details>
+          <details><summary><span class="n">02</span><span class="t"><span class="en">Eternal spring</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">A quiet state of renewal where nature meets design. Soft, elegant, intentional and lasting.</span></div></details>
+          <details><summary><span class="n">03</span><span class="t"><span class="en">For whom</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Design-conscious men and women, 30 to 45, who look for more than a product: a thoughtful, emotionally attuned experience, from the details to the packaging.</span></div></details>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="project-body">
-    <div class="wrap">
-      <div class="prose reveal">
-        <p>
-          <span class="en">The branding reflects a quiet sense of luxury through a clean visual language, inspired by floral textures and spring in full bloom. The project spans flower arrangements in designed packaging alongside a range of lifestyle and care products, creating a brand experience that feels intimate, elegant and timeless.</span>
-          <span class="he">המיתוג משקף תחושת יוקרה שקטה באמצעות שפה חזותית נקייה, בהשראת טקסטורות פרחים והאביב בשיאו. הפרויקט משלב סידורי פרחים באריזות מעוצבות לצד מוצרי לייף סטייל וטיפוח שונים, ויוצר חוויית מותג אינטימית, אלגנטית ועל-זמנית.</span>
-        </p>
-        <p>
-          <span class="en">Beyond the physical identity, I also designed a dedicated delivery app for the brand — carrying the same warm, editorial visual language into product browsing, favorites, order tracking and checkout.</span>
-          <span class="he">מעבר לזהות הפיזית, יצרתי גם אפליקציית משלוחים ייחודית למותג — הנושאת את אותה שפה חזותית חמה ואדיטוריאלית לתוך עיון במוצרים, מועדפים, מעקב הזמנות ותשלום.</span>
-        </p>
+  <!-- ================= 2 DESIGN SYSTEM ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-rose" style="--fd:-1.8s" aria-hidden="true"><span class="pane"><span>02</span></span></span>
+        <div><span class="cs-pill"><span class="en">Design system</span></span></div>
+        <h2 class="cs-h2"><span class="en">From a hummingbird <em>to a whole garden.</em></span></h2>
+        <p class="cs-lede"><span class="en">The icon started as three options: a flower, a bee and a hummingbird. The hummingbird won, with wings that grew more fluid and a rounder, calmer body. Light, graceful and full of life.</span></p>
+      </div>
+    </div>
+    <div class="cs-media" style="margin-top:clamp(40px,5vw,72px)">
+
+      <div class="cs-swatches bc-sw reveal">
+        <div class="cs-sw" style="background:#670A3C;color:#FFFCF0"><b>Tyrian Purple</b>#670A3C</div>
+        <div class="cs-sw" style="background:#FFFCF0;color:#2E3233;box-shadow:inset 0 0 0 1px #ECE6D8"><b>Floral White</b>#FFFCF0</div>
+        <div class="cs-sw" style="background:#AEDDD4;color:#2E3233"><b>Mint Green</b>#AEDDD4</div>
+        <div class="cs-sw" style="background:#119A97;color:#FFFCF0"><b>Dark Cyan</b>#119A97</div>
+        <div class="cs-sw" style="background:#2E3233;color:#FFFCF0"><b>Onyx</b>#2E3233</div>
+      </div>
+      <p class="cs-caption reveal"><span class="en">Inspired by colors with history: Tiffany blue, a symbol of refined gifting, and Tyrian purple, linked to royalty and rarity since ancient times.</span></p>
+
+      <div class="cs-type bc-type reveal">
+        <div><span class="k"><span class="en">Logo</span></span><div class="v"><span class="en">Elova, modified</span></div></div>
+        <div><span class="k"><span class="en">Slogan</span></span><div class="v"><span class="en">Montserrat</span></div></div>
+        <div><span class="k"><span class="en">Headlines</span></span><div class="v"><span class="en">IvyPresto</span></div></div>
+        <div><span class="k"><span class="en">Supporting text</span></span><div class="v"><span class="en">Ploni</span></div></div>
+        <div><span class="k"><span class="en">Labels</span></span><div class="v"><span class="en">The Seasons</span></div></div>
+        <div><span class="k"><span class="en">Digital</span></span><div class="v"><span class="en">Poppins</span></div></div>
       </div>
 
-      <div class="gallery reveal">
-        <figure class="g-wide"><img src="../images/blume/hero.jpg" alt="Blume & Co logotype on carnation flowers"></figure>
-        <figure class="g-wide"><img src="../images/blume/moodboard.jpg" alt="Blume & Co brand board — palette, logotype and lifestyle photography"></figure>
-        <figure class="g-third"><img src="../images/blume/bag.jpg" alt="Blume & Co 'Secret Garden' flower bouquet bag"></figure>
-        <figure class="g-third"><img src="../images/blume/shower-oil.jpg" alt="Blume & Co Citrus Bliss shower oil bottle"></figure>
-        <figure class="g-third"><img src="../images/blume/candle.jpg" alt="Blume & Co Citrus Bliss scented candle"></figure>
-        <figure class="g-wide"><img src="../images/blume/products.jpg" alt="Blume & Co Rose Aura shower oil, candle and box"></figure>
-        <figure class="g-third"><img src="../images/blume/box-lavender.jpg" alt="Blume & Co Lavender Silk packaging box"></figure>
-        <figure class="g-third"><img src="../images/blume/box-citrus.jpg" alt="Blume & Co Citrus Bliss packaging box"></figure>
-        <figure class="g-third"><img src="../images/blume/box-rose.jpg" alt="Blume & Co Rose Aura packaging box"></figure>
-        <figure class="g-wide"><img src="../images/blume/oils.jpg" alt="Blume & Co shower oil collection — Lavender Silk, Citrus Bliss, Rose Aura"></figure>
-        <figure class="g-wide"><img src="../images/blume/stationery.jpg" alt="Blume & Co stationery — letterhead, business cards, envelopes and notepad"></figure>
-        <figure class="g-wide"><img src="../images/blume/posters.jpg" alt="Blume & Co street poster campaign"></figure>
-        <figure class="g-wide"><img src="../images/blume/app.jpg" alt="Blume & Co delivery app screens"></figure>
-        <figure class="g-wide"><img src="../images/blume/app-2.jpg" alt="Blume & Co delivery app — cart, checkout and favorites screens"></figure>
+      <div class="bc-ills cs-sub reveal">
+        <figure><img src="../images/blume/v2/ill-rose-aura.webp" alt="" loading="lazy"><figcaption>Rose Aura</figcaption></figure>
+        <figure><img src="../images/blume/v2/ill-lavender-silk.webp" alt="" loading="lazy"><figcaption>Lavender Silk</figcaption></figure>
+        <figure><img src="../images/blume/v2/ill-citrus-bliss.webp" alt="" loading="lazy"><figcaption>Citrus Bliss</figcaption></figure>
+        <figure><img src="../images/blume/v2/ill-blooming-field.webp" alt="" loading="lazy"><figcaption>Blooming Field</figcaption></figure>
+        <figure><img src="../images/blume/v2/ill-enchanted-forest.webp" alt="" loading="lazy"><figcaption>Enchanted Forest</figcaption></figure>
+        <figure><img src="../images/blume/v2/ill-secret-garden.webp" alt="" loading="lazy"><figcaption>Secret Garden</figcaption></figure>
+      </div>
+      <p class="cs-caption reveal" style="text-align:center"><span class="en">One illustration for every scent and every bouquet.</span></p>
+
+      <div class="cs-grid cs-sub">
+        <figure class="cs-figure s4 reveal"><img src="../images/blume/box-lavender.jpg" alt="Lavender Silk gift box" loading="lazy"></figure>
+        <figure class="cs-figure s4 reveal"><img src="../images/blume/box-citrus.jpg" alt="Citrus Bliss gift box" loading="lazy"></figure>
+        <figure class="cs-figure s4 reveal"><img src="../images/blume/box-rose.jpg" alt="Rose Aura gift box" loading="lazy"></figure>
+        <figure class="cs-figure s8 reveal"><img src="../images/blume/oils.jpg" alt="Shower oil collection: Lavender Silk, Citrus Bliss, Rose Aura" loading="lazy"></figure>
+        <figure class="cs-figure s4 reveal"><img src="../images/blume/shower-oil.jpg" alt="Citrus Bliss shower oil" loading="lazy"></figure>
+        <figure class="cs-figure s5 reveal"><img src="../images/blume/candle.jpg" alt="Citrus Bliss scented candle" loading="lazy"></figure>
+        <figure class="cs-figure s7 reveal"><img src="../images/blume/stationery.jpg" alt="Stationery: letterhead, business cards, envelopes and notepad" loading="lazy"></figure>
+        <figure class="cs-figure s12 reveal"><img src="../images/blume/posters.jpg" alt="Street posters: A gift that lingers, Did you make someone smile today?" loading="lazy"></figure>
       </div>
     </div>
   </section>
+
+  <!-- ================= 3 RESEARCH ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-yellow" style="--fd:-2.7s" aria-hidden="true"><span class="pane"><span>03</span></span></span>
+        <div><span class="cs-pill"><span class="en">Empathize · Research</span></span></div>
+        <h2 class="cs-h2"><span class="en">A gift is <em>a business card.</em></span></h2>
+        <p class="cs-lede"><span class="en">For the app, I asked people how they send gifts today, what makes it feel easy, and where it goes wrong. People don't see a gift as a product. They see it as a reflection of their taste, their care and their reliability.</span></p>
+      </div>
+    </div>
+    <div class="cs-media">
+      <div class="cs-three">
+        <div class="cs-card cs-method reveal"><span class="big">4</span><span class="t"><span class="en">In-depth interviews</span></span><span class="d"><span class="en">People aged 26 to 45: a student, a lawyer, a VP of marketing and a product manager, all of whom send gifts often.</span></span></div>
+        <div class="cs-card cs-method reveal"><span class="big">3</span><span class="t"><span class="en">Competitors analyzed</span></span><span class="d"><span class="en">ZER4U, BUYME and Wolt, for their conventions, strengths and what they give up.</span></span></div>
+        <div class="cs-card cs-method reveal"><span class="big">1</span><span class="t"><span class="en">Cluster chosen</span></span><span class="d"><span class="en">From ideas going wide to one focus: control and confidence over delivery.</span></span></div>
+      </div>
+    </div>
+    <div class="cs-text">
+      <div class="cs-sub">
+        <div class="cs-quotes">
+          <figure class="cs-quote reveal"><blockquote><span class="en">I'd love to get a real photo of the delivery before it leaves, to make sure it's what I expected.</span></blockquote><figcaption><strong>Raz</strong> · <span class="en">28, Tel Aviv</span></figcaption></figure>
+          <figure class="cs-quote reveal"><blockquote><span class="en">The unboxing is my business card.</span></blockquote><figcaption><strong>Liat</strong> · <span class="en">40, VP of Marketing</span></figcaption></figure>
+        </div>
+        <figure class="cs-quote cs-quote-wide reveal"><blockquote><span class="en">Not 500 products. The 10 best ones.</span></blockquote><figcaption><strong>Yehonatan</strong> · <span class="en">45, Product manager</span></figcaption></figure>
+      </div>
+
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">Fast, or premium. <em>Rarely both.</em></span></h3>
+        <div class="cs-card reveal">
+          <div class="cs-matrix-scroll">
+            <table class="cs-matrix">
+              <thead><tr><th></th><th>ZER4U</th><th>BUYME</th><th>Wolt</th><th class="pj">B&amp;C</th></tr></thead>
+              <tbody>
+                <tr><th scope="row"><span class="en">Quick, simple ordering</span></th><td><span class="cs-yes">✓</span></td><td><span class="cs-yes">✓</span></td><td><span class="cs-yes">✓</span></td><td class="pj"><span class="cs-yes">✓</span></td></tr>
+                <tr><th scope="row"><span class="en">A physical, premium gift experience</span></th><td><span class="cs-part">~</span></td><td><span class="cs-no"></span></td><td><span class="cs-no"></span></td><td class="pj"><span class="cs-yes">✓</span></td></tr>
+                <tr><th scope="row"><span class="en">The brand controls delivery end to end</span></th><td><span class="cs-yes">✓</span></td><td><span class="cs-no"></span></td><td><span class="cs-no"></span></td><td class="pj"><span class="cs-yes">✓</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cs-matrix-legend">
+          <span><span class="cs-yes">✓</span><span class="en">Yes</span></span>
+          <span><span class="cs-part">~</span><span class="en">Partly (wide range, dated look)</span></span>
+          <span><span class="cs-no"></span><span class="en">No (a voucher, or one more shop in a marketplace)</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-media">
+      <div class="cs-affinity" aria-label="Affinity map">
+        <div class="cs-affinity-stage">
+          <div class="cs-affinity-panel">
+            <div class="cs-affinity-head">
+              <div>
+                <div class="cs-affinity-title">
+                  <span class="t1"><span class="en">Going wide.</span></span>
+                  <span class="t2"><span class="en">Narrowing down.</span></span>
+                </div>
+                <span class="cs-affinity-sub"><span class="en">20 notes from 4 interviews, grouped into 5 themes.</span></span>
+              </div>
+              <div class="cs-legend">
+                <span><i style="background:#EEFFC2"></i>Rotem</span>
+                <span><i style="background:#E6D8FC"></i>Raz</span>
+                <span><i style="background:#fff;box-shadow:inset 0 0 0 1.5px #C5A4F5"></i>Yehonatan</span>
+                <span><i style="background:#ECECEF"></i>Liat</span>
+              </div>
+            </div>
+            <div class="cs-board">
+              <div class="cs-cluster"><div class="cs-cluster-label"><span class="en">What I see is what they get</span></div><div class="cs-cluster-notes">
+                <div class="cs-note src-a"><span class="en">Ordering a bouquet without knowing how it really looks</span></div>
+                <div class="cs-note src-t"><span class="en">A real photo before it leaves</span></div>
+                <div class="cs-note src-d"><span class="en">Arrived exactly as shown on the site</span></div>
+                <div class="cs-note src-t"><span class="en">Real customer photos, not catalog shots</span></div>
+              </div></div>
+              <div class="cs-cluster"><div class="cs-cluster-label"><span class="en">Timing is everything</span></div><div class="cs-cluster-notes">
+                <div class="cs-note src-h"><span class="en">Unclear arrival time is a deal breaker</span></div>
+                <div class="cs-note src-t"><span class="en">Choose the hour, not only the date</span></div>
+                <div class="cs-note src-a"><span class="en">Wolt shows the route and the minutes left</span></div>
+                <div class="cs-note src-t"><span class="en">Tell me when it was received</span></div>
+              </div></div>
+              <div class="cs-cluster"><div class="cs-cluster-label"><span class="en">The unboxing is the gift</span></div><div class="cs-cluster-notes">
+                <div class="cs-note src-d"><span class="en">The packaging is my business card</span></div>
+                <div class="cs-note src-h"><span class="en">No price inside, a printed card</span></div>
+                <div class="cs-note src-a"><span class="en">I love the moment it's opened</span></div>
+                <div class="cs-note src-t"><span class="en">Let me pick the paper and the ribbon</span></div>
+              </div></div>
+              <div class="cs-cluster"><div class="cs-cluster-label"><span class="en">Less, but better</span></div><div class="cs-cluster-notes">
+                <div class="cs-note src-h"><span class="en">The 10 best, not 500 products</span></div>
+                <div class="cs-note src-h"><span class="en">Too many options and I leave</span></div>
+                <div class="cs-note src-d"><span class="en">Like flipping through a design magazine</span></div>
+                <div class="cs-note src-d"><span class="en">Pixelated photos are not an option</span></div>
+              </div></div>
+              <div class="cs-cluster"><div class="cs-cluster-label"><span class="en">Someone to talk to</span></div><div class="cs-cluster-notes">
+                <div class="cs-note src-a"><span class="en">If something goes wrong, I want an answer</span></div>
+                <div class="cs-note src-a"><span class="en">A number I can call, and the courier's too</span></div>
+                <div class="cs-note src-t"><span class="en">A place for a personal note</span></div>
+                <div class="cs-note src-a"><span class="en">Tell me how to care for the bouquet</span></div>
+              </div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">What I took from it</span></h3>
+        <div class="cs-acc reveal">
+          <details open><summary><span class="n">01</span><span class="t"><span class="en">Trust is visual</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">The gap between what's shown on screen and what arrives turns a thoughtful gesture into a risk.</span></div></details>
+          <details><summary><span class="n">02</span><span class="t"><span class="en">Timing is part of the gift</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">A gift that arrives late, or when no one is home, feels like a personal failure to the sender.</span></div></details>
+          <details><summary><span class="n">03</span><span class="t"><span class="en">Calm beats choice</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Crowded, generic platforms feel impersonal and unreliable. People want a focused experience that takes less mental effort.</span></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4 DEFINE ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-pink" style="--fd:-3.6s" aria-hidden="true"><span class="pane"><span>04</span></span></span>
+        <div><span class="cs-pill"><span class="en">Define</span></span></div>
+        <h2 class="cs-h2"><span class="en">The problem <em>isn't the flowers.</em></span></h2>
+        <p class="cs-lede"><span class="en">Delivery platforms don't let senders accurately track a gift or commit to a delivery window, even when timing is critical. The result is anxiety, and a feeling that the money and emotion put into the gift might go to waste.</span></p>
+      </div>
+      <div class="cs-hmw reveal">
+        <span class="cs-pill">How might we</span>
+        <p class="cs-hmw-q"><span class="l1">give senders full control and peace of mind,</span><em class="l2">so what they see is what arrives,</em><span class="l3">exactly when it was promised?</span></p>
+      </div>
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">What I chose to build first</span></h3>
+        <div class="cs-acc reveal">
+          <details open><summary><span class="n">01</span><span class="t"><span class="en">Must have: a clear progress bar</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Every stage of the order, from processing to arrived, in one glance. The base of transparency.</span></div></details>
+          <details><summary><span class="n">02</span><span class="t"><span class="en">Must have: live updates and ETA</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">An estimated arrival time that updates itself, right on the home screen. It solves the most painful part: not knowing.</span></div></details>
+          <details><summary><span class="n">03</span><span class="t"><span class="en">Must have: only what matters now</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">A clean screen that shows what's happening at this moment, with secondary details tucked away.</span></div></details>
+          <details><summary><span class="n">04</span><span class="t"><span class="en">Nice to have, and later</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">A photo of the delivery as proof, calming microcopy, and quick edits to the greeting after the order has left.</span></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5 STRUCTURE ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-red" style="--fd:-4.5s" aria-hidden="true"><span class="pane"><span>05</span></span></span>
+        <div><span class="cs-pill"><span class="en">Ideate · Structure</span></span></div>
+        <h2 class="cs-h2"><span class="en">The order, <em>always in sight.</em></span></h2>
+      </div>
+      <div class="cs-two">
+        <div class="cs-card reveal">
+          <span class="cs-label"><span class="en">Information architecture</span></span>
+          <div class="cs-tabbar" aria-hidden="true">
+            <span><span class="en">Favorites</span></span>
+            <span><span class="en">Cart</span></span>
+            <span class="on"><span class="en">Home</span></span>
+            <span><span class="en">Account</span></span>
+          </div>
+          <p class="d"><span class="en">Four tabs and a curated catalog: bouquets, gift sets and all items. When an order is on its way, its progress bar sits at the top of Home.</span></p>
+        </div>
+        <div class="cs-card reveal">
+          <span class="cs-label"><span class="en">Main flow</span></span>
+          <div class="cs-flow">
+            <span><span class="en">Home</span></span><i>→</i>
+            <span><span class="en">Product</span></span><i>→</i>
+            <span><span class="en">Cart</span></span><i>→</i>
+            <span><span class="en">Checkout</span></span><i>→</i>
+            <span class="end"><span class="en">Track</span></span>
+          </div>
+          <p class="d"><span class="en">Delivery time is chosen at checkout, and the note to the recipient can be edited while the order is being prepared.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="cs-media cs-sub">
+      <div class="cs-wires">
+        <figure class="cs-wire-item"><img src="../images/blume/v2/wf-home.jpg" alt="Wireframe: home" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/blume/v2/wf-product.jpg" alt="Wireframe: product page" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/blume/v2/wf-cart.jpg" alt="Wireframe: cart" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/blume/v2/wf-checkout.jpg" alt="Wireframe: checkout" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/blume/v2/wf-progress.jpg" alt="Wireframe: progress bar" loading="lazy"></figure>
+      </div>
+      <p class="cs-caption" style="text-align:center"><span class="en">Wireframes for the core flow: home, product, cart, checkout and progress.</span></p>
+    </div>
+  </section>
+
+  <!-- ================= 6 FINAL DESIGN ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-rose" style="--fd:-5.4s" aria-hidden="true"><span class="pane"><span>06</span></span></span>
+        <div><span class="cs-pill"><span class="en">Prototype · Final design</span></span></div>
+        <h2 class="cs-h2"><span class="en">Quiet luxury, <em>in your pocket.</em></span></h2>
+        <p class="cs-lede"><span class="en">Floral white, Tyrian purple and soft frosted cards. The products get the space, and the progress bar gets the spotlight.</span></p>
+      </div>
+    </div>
+    <div class="cs-media" style="margin-top:clamp(48px,6vw,80px)">
+      <div class="cs-phones-panel reveal">
+        <div class="cs-phones bc-phones">
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/blume/v2/screen-onboarding.jpg" alt="Onboarding: follow your gift’s journey" loading="lazy"></div></div><span class="t"><span class="en">Onboarding</span></span><span class="d"><span class="en">The first thing you learn: you can follow your gift all the way.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/blume/v2/screen-home.jpg" alt="Home with an active order on top" loading="lazy"></div></div><span class="t"><span class="en">Home</span></span><span class="d"><span class="en">A curated catalog, with the live order pinned on top.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/blume/v2/screen-cart.jpg" alt="My cart" loading="lazy"></div></div><span class="t"><span class="en">Cart</span></span><span class="d"><span class="en">Few items, big product photos, a clear total.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/blume/v2/screen-checkout.jpg" alt="Checkout with delivery time and note" loading="lazy"></div></div><span class="t"><span class="en">Checkout</span></span><span class="d"><span class="en">Address, note and delivery time, all on one card.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/blume/v2/screen-progress.jpg" alt="Progress bar, ETA and order summary" loading="lazy"></div></div><span class="t"><span class="en">Tracking</span></span><span class="d"><span class="en">Every stage, an ETA, and the note you can still edit.</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7 NEXT ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-yellow" style="--fd:-6.3s" aria-hidden="true"><span class="pane"><span>07</span></span></span>
+        <div><span class="cs-pill"><span class="en">Test · What's next</span></span></div>
+        <h2 class="cs-h2"><span class="en">What I'd <em>test next.</em></span></h2>
+      </div>
+      <div class="cs-acc reveal">
+        <details open><summary><span class="n">01</span><span class="t"><span class="en">Does tracking really calm people down?</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Test the progress bar and ETA with senders, and see whether they still feel the need to check in.</span></div></details>
+        <details><summary><span class="n">02</span><span class="t"><span class="en">A photo before it leaves</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">The feature people asked for most directly. Would a real photo close the gap between screen and reality?</span></div></details>
+        <details><summary><span class="n">03</span><span class="t"><span class="en">Reminders for the dates that matter</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">From the product brief: birthdays and anniversaries, so the gift is never a last-minute rescue.</span></div></details>
+      </div>
+      <div class="cs-sub cs-reflect reveal">
+        <span class="cs-pill"><span class="en">Reflection</span></span>
+        <p style="margin-top:22px"><span class="en">I started Blume &amp; Co from a habit of stopping to photograph flowers wherever I go. Designing the app taught me that luxury isn't only in how something looks. It's also in how calm it makes you feel. The brand promises beauty, and the app has to keep that promise all the way to the door.</span></p>
+      </div>
+    </div>
+    <p class="cs-closing reveal"><span class="en">Did you make someone <em>smile today?</em></span></p>
+  </section>
+
+  </main>
 
   <section class="next-project">
     <div class="wrap">
-      <span class="label"><span class="en">Next project</span><span class="he">הפרויקט הבא</span></span>
-      <a href="kiddoz.html" class="next-card reveal">
-        <h3>Kiddoz</h3>
+      <span class="label"><span class="en">Next project</span></span>
+      <a href="jaco.html" class="next-card reveal">
+        <h3>Jaco</h3>
         <span class="arrow">→</span>
       </a>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
+  <footer class="cta-foot" id="contact">
+    <div class="cta-card reveal">
+      <span class="cta-aura" aria-hidden="true"></span>
+      <h2 class="cta-title">Don't be <em>a stranger.</em></h2>
+      <button type="button" class="cta-mail" data-copy="Aviv.navot@gmail.com" aria-label="Copy my email address: Aviv.navot@gmail.com">
+        <span class="addr">Aviv.navot@gmail.com</span>
+        <span class="cta-tip" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="lbl">Copy</span></span>
+      </button>
+      <a class="cta-phone" href="tel:0544420666">054-4420666</a>
+      <div class="cta-bottom">
         <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-        <div class="footer-links">
-          <a href="mailto:Aviv.navot@gmail.com">Aviv.navot@gmail.com</a>
-          <a href="tel:0544420666">054-4420666</a>
-          <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-          <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-          <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
-        </div>
+        <nav class="cta-links" aria-label="Footer">
+          <a href="../index.html#work">Work</a>
+          <a href="../about.html">About</a>
+          <a href="../resume.html">Resume</a>
+          <a href="https://www.linkedin.com/in/aviv-navot-5a4806437" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="cta-note">© 2026 Aviv Navot</span>
       </div>
-      <p class="footer-note">
-        <span class="en">© 2026 Aviv Navot. Portfolio designed &amp; built with care.</span>
-        <span class="he">© 2026 אביב נבות. הפורטפוליו עוצב ונבנה בקפידה.</span>
-      </p>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/case-study.js?v=27"></script>
 </body>
 </html>

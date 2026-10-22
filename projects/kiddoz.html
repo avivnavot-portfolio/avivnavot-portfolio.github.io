@@ -4,125 +4,525 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kiddoz — Aviv Navot</title>
+<meta name="description" content="Kiddoz: a UX/UI case study on helping parents find the right activity for their kids, nearby and right now. Research, structure and app design.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/case-study.css?v=29">
 </head>
-<body data-title-en="Kiddoz — Aviv Navot" data-title-he="קידוז | אביב נבות">
+<body class="cs kz" data-title-en="Kiddoz — Aviv Navot">
 
   <header class="nav">
     <div class="nav-inner">
       <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
       <nav class="nav-links" id="navLinks">
-        <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-        <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
+        <a href="../index.html#work"><span class="en">Work</span></a>
+        <a href="../about.html"><span class="en">About</span></a>
+        <a href="../resume.html"><span class="en">Resume</span></a>
       </nav>
-
-      <div class="lang-toggle" role="group" aria-label="Language switch">
-        <button data-lang-btn="en" class="active">EN</button>
-        <span class="sep">/</span>
-        <button data-lang-btn="he">HE</button>
-      </div>
     </div>
   </header>
 
-  <section class="project-hero">
-    <div class="wrap">
-      <div class="breadcrumb reveal in">
-        <a href="../index.html"><span class="en">Work</span><span class="he">עבודות</span></a>
-        <span>/</span>
-        <span>Kiddoz</span>
+  <main>
+
+  <!-- ================= HERO ================= -->
+  <section class="cs-hero">
+    <div class="cs-aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <div class="cs-text">
+      <h1 data-words>
+        <span class="en">Less searching.<br><em>More time together.</em></span>
+      </h1>
+      <p class="cs-hero-sub reveal"><span class="en">Kiddoz brings every kids' activity nearby into one place, matched to your child.</span></p>
+      <p class="cs-lede">
+        <span class="en">Parents look for something to do with their kids almost every day. The answers are spread across WhatsApp groups, Facebook pages and municipal sites, often outdated and rarely filtered by age. Kiddoz gathers them on one map, by location, cost and the child's personality, with an AI chat that helps parents find the right activity fast.</span>
+      </p>
+    </div>
+    <div class="cs-media">
+      <div class="kz-stage reveal" role="img" aria-label="Three Kiddoz screens: the welcome screen, the activity map and the smiley onboarding screen">
+        <div class="kz-phone kz-l kz-out"><img src="../images/kiddoz/v2/screen-profile-nili.jpg" alt=""></div>
+        <div class="kz-phone kz-c"><img src="../images/kiddoz/v2/screen-map.jpg" alt=""></div>
+        <div class="kz-phone kz-r kz-out"><img src="../images/kiddoz/onboarding-1.jpg" alt=""></div>
       </div>
-      <div class="project-head reveal in">
-        <span class="eyebrow"><span class="en">UX/UI Design</span><span class="he">עיצוב UX/UI</span></span>
-        <h1>Kiddoz</h1>
-        <p class="lede">
-          <span class="en">A smart app for discovering nearby activities for kids aged 3–10, designed for parents who want it made simple.</span>
-          <span class="he">אפליקציה חכמה לגילוי פעילויות קרובות לילדים בגילאי 3-10, המיועדת להורים.</span>
-        </p>
+      <div class="cs-meta reveal">
+        <div><span class="cs-label"><span class="en">Role</span></span><span class="v"><span class="en">Led concept &amp; ideation, co-designed the UX/UI and visual language</span></span></div>
+        <div><span class="cs-label"><span class="en">Team</span></span><span class="v"><span class="en">Shelly Elkabetz, Adi Fleisher, Aviv Navot</span></span></div>
+        <div><span class="cs-label"><span class="en">Platform</span></span><span class="v"><span class="en">iOS app</span></span></div>
+        <div><span class="cs-label"><span class="en">Methods</span></span><span class="v accent"><span class="en">Interviews, journey map, competitive analysis</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 1 OPPORTUNITY ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-red" style="--fd:-0.9s" aria-hidden="true"><span class="pane"><span>01</span></span></span>
+        <div><span class="cs-pill"><span class="en">The opportunity</span></span></div>
+        <h2 class="cs-h2"><span class="en">Every afternoon, <em>the same question.</em></span></h2>
+        <p class="cs-lede"><span class="en">What do we do with the kids today? Parents want to get them away from screens and tire them out before bedtime. Finding something good, close and at the right time shouldn't take longer than the activity itself.</span></p>
+      </div>
+      <div class="cs-two">
+        <div class="cs-card cs-goal reveal">
+          <span class="who"><span class="en">User goal</span></span>
+          <p><span class="en">Find an activity that fits my child, near me and at a time I'm free, without opening ten tabs.</span></p>
+        </div>
+        <div class="cs-card cs-goal reveal">
+          <span class="who"><span class="en">Business goal</span></span>
+          <p><span class="en">Be the one place parents open every week, with registration and activity benefits inside the app.</span></p>
+        </div>
       </div>
 
-      <div class="specs reveal in">
-        <div class="spec">
-          <span class="k"><span class="en">Role</span><span class="he">תפקיד</span></span>
-          <span class="v"><span class="en">UX/UI Designer</span><span class="he">מעצבת UX/UI</span></span>
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">How we'd measure success</span></h3>
+        <div class="cs-two" style="margin-top:28px">
+          <div class="cs-card reveal">
+            <span class="cs-label"><span class="en">Parents</span></span>
+            <ul class="cs-kpi-list">
+              <li><span class="en">Time from opening the app to choosing an activity</span></li>
+              <li><span class="en">Activities saved or booked per week</span></li>
+              <li><span class="en">Parents who come back within a week</span></li>
+            </ul>
+          </div>
+          <div class="cs-card reveal">
+            <span class="cs-label"><span class="en">Business</span></span>
+            <ul class="cs-kpi-list">
+              <li><span class="en">Bookings made through the app</span></li>
+              <li><span class="en">Benefits redeemed</span></li>
+              <li><span class="en">Activity providers listed</span></li>
+            </ul>
+          </div>
         </div>
-        <div class="spec">
-          <span class="k"><span class="en">Category</span><span class="he">קטגוריה</span></span>
-          <span class="v"><span class="en">Family · Local Discovery</span><span class="he">משפחה · גילוי מקומי</span></span>
+        <p class="cs-note-text reveal"><span class="en">Kiddoz is a concept, so these are the KPIs we designed for, not results.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 2 RESEARCH ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-rose" style="--fd:-1.8s" aria-hidden="true"><span class="pane"><span>02</span></span></span>
+        <div><span class="cs-pill"><span class="en">Empathize · Research</span></span></div>
+        <h2 class="cs-h2"><span class="en">Following a parent <em>through one afternoon.</em></span></h2>
+        <p class="cs-lede"><span class="en">We talked to people who look for activities, or get asked about them, and walked through the search step by step: what parents think, what they want and where it breaks.</span></p>
+      </div>
+    </div>
+    <div class="cs-media">
+      <div class="cs-three">
+        <div class="cs-card cs-method reveal">
+          <span class="big">3</span>
+          <span class="t"><span class="en">Interviews with potential users</span></span>
+          <span class="d"><span class="en">A mother of two, a divorced dad who has his kids on weekends, and a kindergarten teacher parents keep asking for ideas.</span></span>
         </div>
-        <div class="spec">
-          <span class="k"><span class="en">Deliverables</span><span class="he">תוצרים</span></span>
-          <span class="v list">
-            <span><span class="en">UX research</span><span class="he">מחקר UX</span></span>
-            <span><span class="en">App UI</span><span class="he">ממשק אפליקציה</span></span>
-            <span><span class="en">AI assistant flow</span><span class="he">תהליך עוזר AI</span></span>
-          </span>
+        <div class="cs-card cs-method reveal">
+          <span class="big">5</span>
+          <span class="t"><span class="en">Steps in the user journey</span></span>
+          <span class="d"><span class="en">From "what do we do today?" to booking, with thoughts, needs and pain points at every step.</span></span>
+        </div>
+        <div class="cs-card cs-method reveal">
+          <span class="big">3</span>
+          <span class="t"><span class="en">Competitors analyzed</span></span>
+          <span class="d"><span class="en">Ligdol, the Tel Aviv municipality events board and the Herzliya municipality events board.</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <div class="cs-sub">
+        <div class="cs-quotes">
+          <figure class="cs-quote reveal">
+            <blockquote><span class="en">I always find out afterwards that there was an activity we could have gone to.</span></blockquote>
+            <figcaption><strong>Michal</strong> · <span class="en">Mother of two, ages 4 and 7</span></figcaption>
+          </figure>
+          <figure class="cs-quote reveal">
+            <blockquote><span class="en">I have no ideas what to do with them. It's all scattered on Facebook or on sites that aren't updated.</span></blockquote>
+            <figcaption><strong>Elad</strong> · <span class="en">Divorced dad, weekends with his kids</span></figcaption>
+          </figure>
+        </div>
+        <figure class="cs-quote cs-quote-wide reveal">
+          <blockquote><span class="en">Parents ask me about activities all the time. I don't have one place to send them.</span></blockquote>
+          <figcaption><strong>Rotem</strong> · <span class="en">Kindergarten teacher</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">Plenty of listings, <em>none of them personal.</em></span></h3>
+        <div class="cs-card reveal">
+          <div class="cs-matrix-scroll">
+            <table class="cs-matrix">
+              <thead>
+                <tr><th></th><th>Ligdol</th><th>Tel Aviv</th><th>Herzliya</th><th class="pj">Kiddoz</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><span class="en">Filter by age</span></th>
+                  <td><span class="cs-yes" aria-label="Yes">✓</span></td><td><span class="cs-part" aria-label="Partly">~</span></td><td><span class="cs-no" aria-label="No"></span></td><td class="pj"><span class="cs-yes" aria-label="Yes">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="en">Matched to the child, not only the age</span></th>
+                  <td><span class="cs-no" aria-label="No"></span></td><td><span class="cs-no" aria-label="No"></span></td><td><span class="cs-no" aria-label="No"></span></td><td class="pj"><span class="cs-yes" aria-label="Yes">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="en">Benefits and deals</span></th>
+                  <td><span class="cs-yes" aria-label="Yes">✓</span></td><td><span class="cs-yes" aria-label="Yes">✓</span></td><td><span class="cs-no" aria-label="No"></span></td><td class="pj"><span class="cs-yes" aria-label="Yes">✓</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><span class="en">Community between families</span></th>
+                  <td><span class="cs-no" aria-label="No"></span></td><td><span class="cs-part" aria-label="Partly">~</span></td><td><span class="cs-yes" aria-label="Yes">✓</span></td><td class="pj"><span class="cs-yes" aria-label="Yes">✓</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="cs-matrix-legend">
+          <span><span class="cs-yes">✓</span><span class="en">Yes</span></span>
+          <span><span class="cs-part">~</span><span class="en">Partly (location, date and topic, or a residents' card)</span></span>
+          <span><span class="cs-no"></span><span class="en">No</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- affinity board -->
+    <div class="cs-media">
+      <div class="cs-affinity" aria-label="Affinity map">
+        <div class="cs-affinity-stage">
+          <div class="cs-affinity-panel">
+            <div class="cs-affinity-head">
+              <div>
+                <div class="cs-affinity-title">
+                  <span class="t1"><span class="en">Going wide.</span></span>
+                  <span class="t2"><span class="en">Narrowing down.</span></span>
+                </div>
+                <span class="cs-affinity-sub"><span class="en">23 notes from 3 interviews, the user journey and desk research, grouped into 6 themes.</span></span>
+              </div>
+              <div class="cs-legend">
+                <span><i style="background:#EEFFC2"></i><span class="en">Parents</span></span>
+                <span><i style="background:#E6D8FC"></i><span class="en">Kindergarten teacher</span></span>
+                <span><i style="background:#fff;box-shadow:inset 0 0 0 1.5px #C5A4F5"></i><span class="en">User journey</span></span>
+                <span><i style="background:#ECECEF"></i><span class="en">Desk research</span></span>
+              </div>
+            </div>
+            <div class="cs-board">
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">Information is everywhere</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-a"><span class="en">I find out afterwards that there was something</span></div>
+                  <div class="cs-note src-a"><span class="en">It's all scattered on Facebook</span></div>
+                  <div class="cs-note src-t"><span class="en">No one place to send parents</span></div>
+                  <div class="cs-note src-d"><span class="en">WhatsApp groups, city sites, Instagram</span></div>
+                  <div class="cs-note src-h"><span class="en">Four tabs open, half of it already over</span></div>
+                </div>
+              </div>
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">Age isn't enough</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-h"><span class="en">He's 4. What actually fits him?</span></div>
+                  <div class="cs-note src-d"><span class="en">Siblings aren't the same age</span></div>
+                  <div class="cs-note src-h"><span class="en">The title doesn't match the content</span></div>
+                  <div class="cs-note src-a"><span class="en">Suggest things by age and place, for me</span></div>
+                </div>
+              </div>
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">Time and place decide</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-h"><span class="en">Close to me, or on the way from work</span></div>
+                  <div class="cs-note src-d"><span class="en">Only a specific window of free time</span></div>
+                  <div class="cs-note src-d"><span class="en">Too far away</span></div>
+                  <div class="cs-note src-d"><span class="en">Not every parent has a car</span></div>
+                </div>
+              </div>
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">The small details matter</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-h"><span class="en">Is there shade? Toilets? Room for a stroller?</span></div>
+                  <div class="cs-note src-h"><span class="en">Is there room? How much? Parking?</span></div>
+                  <div class="cs-note src-h"><span class="en">Broken links, no photos, no reviews</span></div>
+                </div>
+              </div>
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">Make it easy to come back</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-h"><span class="en">Let me save it for later</span></div>
+                  <div class="cs-note src-a"><span class="en">Remind me</span></div>
+                  <div class="cs-note src-h"><span class="en">Sign up in one tap</span></div>
+                  <div class="cs-note src-h"><span class="en">Is it full? I can't tell</span></div>
+                </div>
+              </div>
+              <div class="cs-cluster">
+                <div class="cs-cluster-label"><span class="en">Parents trust other parents</span></div>
+                <div class="cs-cluster-notes">
+                  <div class="cs-note src-d"><span class="en">Real reviews from other parents</span></div>
+                  <div class="cs-note src-a"><span class="en">If you liked this, you might like…</span></div>
+                  <div class="cs-note src-t"><span class="en">Links I can share, by area and topic</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-text">
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">What we took from it</span></h3>
+        <div class="cs-acc reveal">
+          <details open><summary><span class="n">01</span><span class="t"><span class="en">Make it personal</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Match activities by age, location and what the family liked before, instead of one long list for everyone.</span></div></details>
+          <details><summary><span class="n">02</span><span class="t"><span class="en">Make it visual and fast</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Parents don't have time to read. A map, big images and quick filters say more than paragraphs.</span></div></details>
+          <details><summary><span class="n">03</span><span class="t"><span class="en">Make it easy to come back</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Favorites and reminders, so a good idea found on Sunday is still there on Thursday afternoon.</span></div></details>
+          <details><summary><span class="n">04</span><span class="t"><span class="en">Answer the practical questions</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Full details on every activity: when, where, how much, and whether there's still room.</span></div></details>
+        </div>
+      </div>
+
+      <div class="cs-sub cs-wide">
+        <h3 class="cs-h3 reveal"><span class="en">From insight <em>to decision</em></span></h3>
+        <div class="cs-card reveal">
+          <div class="cs-bridge">
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Information is everywhere</span></span><span class="c2"><span class="en">Gather every activity on one map, around where you are</span></span><span class="c3"><span class="en">Map home</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Age isn't enough</span></span><span class="c2"><span class="en">A profile for each child: age, personality and interests</span></span><span class="c3"><span class="en">Child profiles</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Time and place decide</span></span><span class="c2"><span class="en">Filter by cost, distance, group size and indoor space</span></span><span class="c3"><span class="en">Quick filter</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">No time to search</span></span><span class="c2"><span class="en">A chat that asks the right questions and suggests a match</span></span><span class="c3"><span class="en">AI chat</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Parents trust other parents</span></span><span class="c2"><span class="en">Connect kids with similar interests to join activities together</span></span><span class="c3"><span class="en">Friends circle</span></span></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="project-body">
-    <div class="wrap">
-      <div class="prose reveal">
-        <p>
-          <span class="en">Kiddoz centralizes a wide range of children's activities in one place, letting parents filter options by location, cost and their child's personality profile — instead of juggling a dozen scattered sources.</span>
-          <span class="he">קידוז מרכזת מגוון פעילויות במקום אחד, ומאפשרת להורים לסנן אפשרויות לפי מיקום, עלות ופרופיל האישיות של הילד — במקום להתמודד עם עשרות מקורות מפוזרים.</span>
-        </p>
-        <p>
-          <span class="en">Through a combination of careful UX design and an AI-based assistant, Kiddoz simplifies the search process and helps families find meaningful, age-appropriate experiences with ease.</span>
-          <span class="he">באמצעות שילוב של חוויית משתמש מוקפדת ועוזר מבוסס בינה מלאכותית, קידוז מפשטת את תהליך החיפוש ועוזרת למשפחות למצוא חוויות משמעותיות ומותאמות גיל בקלות.</span>
-        </p>
+  <!-- ================= 3 DEFINE ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-yellow" style="--fd:-2.7s" aria-hidden="true"><span class="pane"><span>03</span></span></span>
+        <div><span class="cs-pill"><span class="en">Define</span></span></div>
+        <h2 class="cs-h2"><span class="en">There's no shortage <em>of activities.</em></span></h2>
+        <p class="cs-lede"><span class="en">There's plenty happening. It's just scattered, often outdated, and rarely matched to the child in front of you.</span></p>
       </div>
 
-      <div class="gallery reveal">
-        <figure class="g-wide"><img src="../images/kiddoz/intro.jpg" alt="Kiddoz onboarding screens"></figure>
-        <figure class="g-wide"><img src="../images/kiddoz/brand-board.jpg" alt="Kiddoz brand board — palette, logo, character and app screens"></figure>
-        <figure class="g-half"><img src="../images/kiddoz/map-detail.jpg" alt="Kiddoz map view with activity pins"></figure>
-        <figure class="g-half"><img src="../images/kiddoz/map.jpg" alt="Kiddoz map view and filters"></figure>
-        <figure class="g-half"><img src="../images/kiddoz/activities.jpg" alt="Kiddoz activity browsing and matching screens"></figure>
-        <figure class="g-half"><img src="../images/kiddoz/app-flows.jpg" alt="Kiddoz onboarding and login screens on two phones"></figure>
+      <div class="cs-hmw reveal">
+        <span class="cs-pill">How might we</span>
+        <p class="cs-hmw-q"><span class="l1">help parents find an activity that fits their child,</span><em class="l2">nearby and right now,</em><span class="l3">without hours of searching?</span></p>
+      </div>
+
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">What makes Kiddoz different</span></h3>
+        <div class="cs-acc reveal">
+          <details open><summary><span class="n">01</span><span class="t"><span class="en">An AI chat that asks before it suggests</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Guided questions or free typing. It recommends what fits right now, by location, time, weather, mood and interests.</span></div></details>
+          <details><summary><span class="n">02</span><span class="t"><span class="en">Matched to the child, not only the age</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Each child gets a profile. Shy? Loves nature? Into art? Finds it hard to focus? Kiddoz suggests activities that support who they are.</span></div></details>
+          <details><summary><span class="n">03</span><span class="t"><span class="en">Kids who like the same things, together</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Parents can connect children with similar interests and plan to join activities together, so kids build real friendships along the way.</span></div></details>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- ================= 4 STRUCTURE ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-pink" style="--fd:-3.6s" aria-hidden="true"><span class="pane"><span>04</span></span></span>
+        <div><span class="cs-pill"><span class="en">Ideate · Structure</span></span></div>
+        <h2 class="cs-h2"><span class="en">The map <em>in the middle.</em></span></h2>
+      </div>
+
+      <div class="cs-two">
+        <div class="cs-card reveal">
+          <span class="cs-label"><span class="en">Information architecture</span></span>
+          <div class="cs-tabbar" aria-hidden="true">
+            <span><span class="en">Profile</span></span>
+            <span><span class="en">Favorites</span></span>
+            <span class="on"><span class="en">Map</span></span>
+            <span><span class="en">Activities</span></span>
+            <span><span class="en">Chat</span></span>
+          </div>
+          <p class="d"><span class="en">Five tabs with the map in the center, because "what's near me?" is where most searches start. The chat has its own tab, one tap from anywhere.</span></p>
+        </div>
+        <div class="cs-card reveal">
+          <span class="cs-label"><span class="en">Main flow</span></span>
+          <div class="cs-flow">
+            <span><span class="en">Map</span></span><i>→</i>
+            <span><span class="en">Filter</span></span><i>→</i>
+            <span><span class="en">Activity</span></span><i>→</i>
+            <span><span class="en">Fits my child?</span></span><i>→</i>
+            <span class="end"><span class="en">Book</span></span>
+          </div>
+          <p class="d"><span class="en">Before paying, parents pick which of their kids are coming, and can apply a benefit on the same screen.</span></p>
+        </div>
+      </div>
+
+      <div class="cs-sub cs-wide">
+        <h3 class="cs-h3 reveal"><span class="en">Jobs to be done</span></h3>
+        <div class="cs-card reveal">
+          <div class="cs-bridge">
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Book an activity on specific days and hours</span></span><span class="c2"><span class="en">Find something for the kids at a set time</span></span><span class="c3"><span class="en">Filtered search</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Find activities close to me</span></span><span class="c2"><span class="en">Save time, stay near home</span></span><span class="c3"><span class="en">Map search</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Find activities that cost less</span></span><span class="c2"><span class="en">Save money</span></span><span class="c3"><span class="en">Benefits page</span></span></div>
+            <div class="cs-bridge-row"><span class="c1"><span class="en">Find what fits my whole family</span></span><span class="c2"><span class="en">Something for a 3 year old and a 1 year old, together</span></span><span class="c3"><span class="en">Family profile</span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-sub cs-convo">
+        <div class="reveal">
+          <h3 class="cs-h3"><span class="en">A chat that <em>asks first.</em></span></h3>
+          <p class="cs-lede" style="font-size:17.5px"><span class="en">Before drawing the chat screens, we mapped how a conversation narrows down a search. Parents can type freely, or tap through short questions that do the filtering for them.</span></p>
+        </div>
+        <div class="cs-tree reveal">
+          <div class="cs-node decision"><span class="k"><span class="en">Branch</span></span><span class="en">How would you like to chat?</span></div>
+          <div class="cs-link"></div>
+          <div class="cs-branches">
+            <div class="cs-node"><span class="en">Free typing, in your own words</span></div>
+            <div class="cs-node"><span class="en">Guided answers, one tap at a time</span></div>
+          </div>
+          <div class="cs-link"></div>
+          <div class="cs-node"><span class="k"><span class="en">Parent</span></span><span class="en">"I'm looking for an activity for my girls, 4 and 6."</span></div>
+          <div class="cs-link"></div>
+          <div class="cs-node decision"><span class="k"><span class="en">Branch</span></span><span class="en">Which area, what time of day, what kind?</span><div class="cs-quote-sm"><span class="en">Center, morning, free.</span></div></div>
+          <div class="cs-link"></div>
+          <div class="cs-node decision"><span class="k"><span class="en">Branch</span></span><span class="en">What's your budget?</span><div class="cs-quote-sm"><span class="en">Free · 10–30 · 30–60 · 60–100 · 100+</span></div></div>
+          <div class="cs-link"></div>
+          <div class="cs-node taste"><span class="k"><span class="en">Match</span></span><span class="en">An activity nearby, with the date, time and place, ready to save or book.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs-media cs-sub">
+      <div class="cs-wires">
+        <figure class="cs-wire-item"><img src="../images/kiddoz/v2/wf-chat-sketch.jpg" alt="Wireframe: AI chat" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/kiddoz/v2/wf-activity-sketch.jpg" alt="Wireframe: activity page" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/kiddoz/v2/wf-checkout-sketch.jpg" alt="Wireframe: choosing kids and paying" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/kiddoz/v2/wf-confirm-sketch.jpg" alt="Wireframe: booking confirmed" loading="lazy"></figure>
+        <figure class="cs-wire-item"><img src="../images/kiddoz/v2/wf-friends-sketch.jpg" alt="Wireframe: my friends" loading="lazy"></figure>
+      </div>
+      <p class="cs-caption"><span class="en">Wireframes for the chat and the booking flow: activity, choosing which kids are coming, paying with a benefit, and confirmation.</span></p>
+    </div>
+  </section>
+
+  <!-- ================= 5 FINAL DESIGN ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-red" style="--fd:-4.5s" aria-hidden="true"><span class="pane"><span>05</span></span></span>
+        <div><span class="cs-pill"><span class="en">Prototype · Final design</span></span></div>
+        <h2 class="cs-h2"><span class="en">Playful for kids, <em>clear for parents.</em></span></h2>
+        <p class="cs-lede"><span class="en">Bright colors and a friendly smiley for the mood, big round buttons and short labels for parents scrolling with one hand.</span></p>
+      </div>
+    </div>
+
+    <div class="cs-media" style="margin-top:clamp(48px,6vw,80px)">
+      <div class="cs-phones-panel reveal">
+        <div class="cs-phones">
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-map.jpg" alt="Map home with activity pins" loading="lazy"></div></div><span class="t"><span class="en">Map home</span></span><span class="d"><span class="en">Every pin is something happening near you.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-filter.jpg" alt="Filter: free, girls only, boys only, up to 1 km, up to 8 kids, indoors" loading="lazy"></div></div><span class="t"><span class="en">Quick filter</span></span><span class="d"><span class="en">Free, up to 1 km, small groups, indoors. One tap each.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-activity.jpg" alt="Activity page: circus in Holon" loading="lazy"></div></div><span class="t"><span class="en">Activity</span></span><span class="d"><span class="en">When, where and how much, plus a check if it fits your child.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-chat.jpg" alt="Chat opening: free typing or guided answers" loading="lazy"></div></div><span class="t"><span class="en">Chat</span></span><span class="d"><span class="en">The smiley asks how you'd like to talk.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-chat-budget.jpg" alt="Chat: choosing a price range" loading="lazy"></div></div><span class="t"><span class="en">Guided answers</span></span><span class="d"><span class="en">Each tap narrows it down, like choosing a budget.</span></span></div>
+          <div class="cs-phone"><div class="shell"><div class="screen"><img src="../images/kiddoz/v2/screen-profile.jpg" alt="Personal area with a profile for each child" loading="lazy"></div></div><span class="t"><span class="en">Profile</span></span><span class="d"><span class="en">A profile for each child, with friends, groups and benefits.</span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6 DESIGN LANGUAGE ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head flip reveal">
+        <span class="cs-glass g-rose" style="--fd:-5.4s" aria-hidden="true"><span class="pane"><span>06</span></span></span>
+        <div><span class="cs-pill"><span class="en">Design language</span></span></div>
+        <h2 class="cs-h2"><span class="en">A smiley <em>that waves hello.</em></span></h2>
+        <p class="cs-lede"><span class="en">A fixed palette carries through every screen, and a cheerful smiley character greets parents from the very first onboarding screen and comes back as the chat's face.</span></p>
+      </div>
+    </div>
+
+    <div class="cs-media" style="margin-top:clamp(48px,6vw,80px)">
+      <div class="cs-swatches reveal">
+        <div class="cs-sw" style="background:#496DDB;color:#FFFFFF"><b>Kiddoz Blue</b>#496DDB</div>
+        <div class="cs-sw" style="background:#172C63;color:#FFFFFF"><b>Navy</b>#172C63</div>
+        <div class="cs-sw" style="background:#FFAFF0;color:#172C63"><b>Bubblegum</b>#FFAFF0</div>
+        <div class="cs-sw" style="background:#40DBDD;color:#172C63"><b>Turquoise</b>#40DBDD</div>
+        <div class="cs-sw" style="background:#F9DC4F;color:#172C63"><b>Sunny</b>#F9DC4F</div>
+      </div>
+      <div class="cs-type reveal">
+        <div><span class="k"><span class="en">Logo</span></span><div class="v"><span class="en">Rockey</span></div></div>
+        <div><span class="k"><span class="en">Interface</span></span><div class="v"><span class="en">Ploni, in several weights</span></div></div>
+        <div><span class="k"><span class="en">Character</span></span><div class="v"><span class="en">The Kiddoz smiley</span></div></div>
+      </div>
+
+      <div class="kz-smileys cs-sub reveal" role="img" aria-label="The Kiddoz smiley in four poses: waving, jumping, posing and a happy handstand">
+        <img src="../images/kiddoz/v2/smiley-wave.webp" alt="" loading="lazy">
+        <img src="../images/kiddoz/v2/smiley-jump.webp" alt="" loading="lazy">
+        <img src="../images/kiddoz/v2/smiley-pose.webp" alt="" loading="lazy">
+        <img src="../images/kiddoz/v2/smiley-handstand.webp" alt="" loading="lazy">
+      </div>
+      <p class="cs-caption" style="text-align:center"><span class="en">The Kiddoz smiley, in a few of its moods.</span></p>
+    </div>
+  </section>
+
+  <!-- ================= 7 NEXT ================= -->
+  <section class="cs-sec">
+    <div class="cs-text">
+      <div class="cs-head reveal">
+        <span class="cs-glass g-yellow" style="--fd:-6.3s" aria-hidden="true"><span class="pane"><span>07</span></span></span>
+        <div><span class="cs-pill"><span class="en">Test · What's next</span></span></div>
+        <h2 class="cs-h2"><span class="en">What we'd <em>test next.</em></span></h2>
+      </div>
+      <div class="cs-acc reveal">
+        <details open><summary><span class="n">01</span><span class="t"><span class="en">Usability testing with parents</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Ask 5 to 8 parents to find and book an activity, and time how long it takes compared to how they search today.</span></div></details>
+        <details><summary><span class="n">02</span><span class="t"><span class="en">Guided chat or free typing?</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">See which way parents choose, and whether the guided answers really get them to a match faster.</span></div></details>
+        <details><summary><span class="n">03</span><span class="t"><span class="en">Do parents trust the child profile?</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">Matching by personality is the core difference. It has to feel helpful, not intrusive.</span></div></details>
+        <details><summary><span class="n">04</span><span class="t"><span class="en">The provider side</span></span><span class="pm" aria-hidden="true"></span></summary><div class="body"><span class="en">How activity providers list activities, keep them updated and offer benefits, so the information never goes stale.</span></div></details>
+      </div>
+
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">What I'd do <em>differently.</em></span></h3>
+        <p class="cs-lede reveal"><span class="en">Parents told us they trust other parents. I'd bring that into the activity page itself: reviews, photos from families who went, and a simple way to share an activity with the WhatsApp group where so many searches start today.</span></p>
+      </div>
+
+      <div class="cs-sub cs-reflect reveal">
+        <span class="cs-pill"><span class="en">Reflection</span></span>
+        <p style="margin-top:22px"><span class="en">Kiddoz started as "put all the activities in one place." The research pointed somewhere else: parents don't need more options, they need the right one, for this child, today. That shifted our focus from collecting to matching, and made the chat and the child profile the heart of the app.</span></p>
+      </div>
+    </div>
+    <p class="cs-closing reveal"><span class="en">So, what are we <em>doing today?</em></span></p>
+  </section>
+
+  </main>
 
   <section class="next-project">
     <div class="wrap">
-      <span class="label"><span class="en">Next project</span><span class="he">הפרויקט הבא</span></span>
-      <a href="rami-portis.html" class="next-card reveal">
-        <h3>Rami Portis</h3>
+      <span class="label"><span class="en">Next project</span></span>
+      <a href="blume-and-co.html" class="next-card reveal">
+        <h3>Blume &amp; Co</h3>
         <span class="arrow">→</span>
       </a>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-grid">
+  <footer class="cta-foot" id="contact">
+    <div class="cta-card reveal">
+      <span class="cta-aura" aria-hidden="true"></span>
+      <h2 class="cta-title">Don't be <em>a stranger.</em></h2>
+      <button type="button" class="cta-mail" data-copy="Aviv.navot@gmail.com" aria-label="Copy my email address: Aviv.navot@gmail.com">
+        <span class="addr">Aviv.navot@gmail.com</span>
+        <span class="cta-tip" aria-live="polite"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg><span class="lbl">Copy</span></span>
+      </button>
+      <a class="cta-phone" href="tel:0544420666">054-4420666</a>
+      <div class="cta-bottom">
         <a href="../index.html" class="brand">Aviv Navot<span class="dot">.</span></a>
-        <div class="footer-links">
-          <a href="mailto:Aviv.navot@gmail.com">Aviv.navot@gmail.com</a>
-          <a href="tel:0544420666">054-4420666</a>
-          <a href="../index.html#work"><span class="en">Work</span><span class="he">עבודות</span></a>
-          <a href="../about.html"><span class="en">About</span><span class="he">קצת עליי</span></a>
-          <a href="../contact.html"><span class="en">Contact</span><span class="he">צרו קשר</span></a>
-        </div>
+        <nav class="cta-links" aria-label="Footer">
+          <a href="../index.html#work">Work</a>
+          <a href="../about.html">About</a>
+          <a href="../resume.html">Resume</a>
+          <a href="https://www.linkedin.com/in/aviv-navot-5a4806437" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="cta-note">© 2026 Aviv Navot</span>
       </div>
-      <p class="footer-note">
-        <span class="en">© 2026 Aviv Navot. Portfolio designed &amp; built with care.</span>
-        <span class="he">© 2026 אביב נבות. הפורטפוליו עוצב ונבנה בקפידה.</span>
-      </p>
     </div>
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/case-study.js?v=27"></script>
 </body>
 </html>
