@@ -321,6 +321,67 @@
   }
 
 
+  /* Jaco hero: the box stays pinned while you scroll, opens, and letters pop out */
+  function initJacoBox(wrap) {
+    var pin = wrap.querySelector(".jc-pin"), stage = wrap.querySelector(".jc-stage");
+    var closed = wrap.querySelector(".jc-closed"), open = wrap.querySelector(".jc-open");
+    var shadow = wrap.querySelector(".jc-shadow"), hint = wrap.querySelector(".jc-hint");
+    var letters = Array.prototype.slice.call(wrap.querySelectorAll(".jc-l"));
+    if (!pin || !closed || !open) return;
+    if (reduce) { closed.style.opacity = "0"; open.style.opacity = "1"; letters.forEach(function (l) { l.style.opacity = "1"; }); return; }
+    wrap.classList.add("on");
+    var cur = 0, target = 0, running = false, topPx = 0, travel = 1, ox = 0, oy = 0, data = [];
+    function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+    function smooth(t) { return 0.5 - Math.cos(Math.PI * t) / 2; }
+    function back(t) { var c = 1.5; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); }
+    function measure() {
+      var vh = window.innerHeight, h = pin.offsetHeight;
+      topPx = Math.max(84, (vh - h) / 2 + 24);
+      pin.style.top = topPx + "px";
+      travel = Math.round(vh * 0.95);
+      wrap.style.height = (h + travel) + "px";
+      var w = stage.offsetWidth, sh = stage.offsetHeight;
+      ox = (w < 560 ? 0.59 : 0.57) * w; oy = 0.6 * sh;   /* the open box's mouth */
+      data = letters.map(function (l, i) {
+        var cx = l.offsetLeft + l.offsetWidth / 2, cy = l.offsetTop + l.offsetHeight / 2;
+        return { el: l, dx: ox - cx, dy: oy - cy, d: 0.48 + 0.028 * i };
+      });
+    }
+    function progress() { return clamp((topPx - wrap.getBoundingClientRect().top) / travel); }
+    function paint() {
+      var p = cur;
+      var lift = smooth(clamp(p / 0.4));
+      var wob = Math.sin(lift * Math.PI * 3) * 2.2 * (1 - 0.5 * lift);   /* a little excited wiggle before it opens */
+      var fadeOut = smooth(clamp((p - 0.36) / 0.14));
+      closed.style.transform = "translate3d(0," + (-4 * lift).toFixed(2) + "%,0) rotate(" + wob.toFixed(2) + "deg) scale(" + (1 + 0.05 * lift + 0.04 * fadeOut).toFixed(3) + ")";
+      closed.style.opacity = (1 - fadeOut).toFixed(3);
+      closed.style.filter = "drop-shadow(0 30px 40px rgba(53,54,59,.14)) blur(" + (10 * fadeOut).toFixed(1) + "px)";
+      var o = smooth(clamp((p - 0.38) / 0.16));
+      open.style.opacity = o.toFixed(3);
+      open.style.transform = "translate3d(0," + (3 * (1 - o)).toFixed(2) + "%,0) scale(" + (1.06 - 0.06 * o).toFixed(3) + ")";
+      open.style.filter = "drop-shadow(0 30px 40px rgba(53,54,59,.12)) blur(" + (10 * (1 - o)).toFixed(1) + "px)";
+      if (shadow) shadow.style.transform = "scaleX(" + (1 + 0.08 * lift - 0.1 * o).toFixed(3) + ")";
+      if (hint) hint.style.opacity = (1 - clamp(p / 0.2)).toFixed(2);
+      data.forEach(function (d) {
+        var t = clamp((p - d.d) / 0.3), e = back(t), k = 1 - e;
+        d.el.style.opacity = clamp(t * 2.5).toFixed(3);
+        d.el.style.transform = "translate3d(" + (d.dx * k).toFixed(1) + "px," + (d.dy * k).toFixed(1) + "px,0) scale(" + (0.2 + 0.8 * Math.min(e, 1.1)).toFixed(3) + ")";
+      });
+    }
+    function tick() {
+      cur += (target - cur) * 0.1;
+      if (Math.abs(target - cur) < 0.0005) cur = target;
+      paint();
+      if (cur !== target) window.requestAnimationFrame(tick); else running = false;
+    }
+    function update() { target = progress(); if (!running) { running = true; window.requestAnimationFrame(tick); } }
+    measure(); cur = target = progress(); paint();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", function () { measure(); update(); });
+    window.addEventListener("load", function () { measure(); update(); });
+  }
+
+
   /* closing banner: click the email to copy it */
   function initCopyMail() {
     document.querySelectorAll(".cta-mail[data-copy]").forEach(function (btn) {
@@ -350,6 +411,8 @@
     initVideos();
     initCopyMail();
     document.querySelectorAll(".cs-stage, .kz-stage, .bc-stage").forEach(initStage);
+    document.querySelectorAll("[data-jc]").forEach(initJacoBox);
+    document.querySelectorAll(".jc-flip").forEach(function (c) { c.addEventListener("click", function () { if (window.matchMedia("(hover: hover)").matches) return; c.classList.toggle("on"); }); });
     document.querySelectorAll("[data-lang-btn]").forEach(function (b) {
       b.addEventListener("click", function () {
         setTimeout(function () { recomputes.forEach(function (f) { f(); }); typeHeadline(); }, 30);
