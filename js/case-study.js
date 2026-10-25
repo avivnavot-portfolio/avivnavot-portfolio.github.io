@@ -172,6 +172,51 @@
     return compute;
   }
 
+  /* ---------- accordions: smooth close ---------- */
+  function initAccordions() {
+    document.querySelectorAll(".cs-acc details").forEach(function (d) {
+      var sum = d.querySelector("summary");
+      var body = d.querySelector(".body");
+      if (!sum || !d.animate) return;
+      sum.addEventListener("click", function (e) {
+        if (reduce) return;
+        e.preventDefault();
+        if (d.classList.contains("closing") || d.classList.contains("opening")) return;
+        var cs = getComputedStyle(d);
+        if (!d.open) {
+          /* smooth open: grow from the summary height to the full card */
+          var closedH = d.offsetHeight;
+          d.open = true;
+          var openH = d.offsetHeight;
+          d.classList.add("opening");
+          d.style.overflow = "hidden";
+          var grow = d.animate([{ height: closedH + "px" }, { height: openH + "px" }],
+            { duration: 480, easing: "cubic-bezier(.4,0,.2,1)" });
+          grow.onfinish = grow.oncancel = function () {
+            d.classList.remove("opening");
+            d.style.overflow = "";
+          };
+          return;
+        }
+        var borders = parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+        var from = d.offsetHeight, to = sum.offsetHeight + borders;
+        d.classList.add("closing");
+        d.style.overflow = "hidden";
+        var fade = body ? body.animate(
+          [{ opacity: 1, transform: "none" }, { opacity: 0, transform: "translateY(-6px)" }],
+          { duration: 280, easing: "ease", fill: "forwards" }) : null;
+        var shrink = d.animate([{ height: from + "px" }, { height: to + "px" }],
+          { duration: 480, easing: "cubic-bezier(.4,0,.2,1)" });
+        shrink.onfinish = function () {
+          d.open = false;
+          d.classList.remove("closing");
+          d.style.overflow = "";
+          if (fade) fade.cancel();
+        };
+      });
+    });
+  }
+
   /* ---------- 3. videos ---------- */
   function initVideos() {
     var vids = document.querySelectorAll("video[data-autoplay]");
@@ -415,6 +460,7 @@
     var recomputes = [];
     document.querySelectorAll(".cs-affinity").forEach(function (s) { recomputes.push(initAffinity(s)); });
     initVideos();
+    initAccordions();
     initCopyMail();
     document.querySelectorAll(".cs-stage, .kz-stage, .bc-stage").forEach(initStage);
     document.querySelectorAll("[data-jc]").forEach(initJacoBox);

@@ -216,6 +216,11 @@ html[lang="he"] .cs-acc .body{ padding:0 calc(28px + 24px + 18px) 26px 28px; }
 html[lang="he"] .cs-acc .body q{ font-style:normal; }
 .cs-acc details[open] .body{ animation:accIn .45s var(--ease); }
 @keyframes accIn{ from{ opacity:0; transform:translateY(-6px);} to{ opacity:1; transform:none; } }
+/* smooth close: card, icon and text ease back while the height collapses */
+.cs-acc details.closing{ background:var(--cs-card); border-color:transparent; }
+.cs-acc details.closing summary .pm{ background:#ECECEF; }
+.cs-acc details.closing summary .pm::before{ transform:translate(-50%,-50%); background:var(--cs-ink); }
+.cs-acc details.closing summary .pm::after{ transform:translate(-50%,-50%) rotate(90deg); background:var(--cs-ink); }
 
 /* ---------- research ---------- */
 .cs-three{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:clamp(40px,5vw,64px); }
