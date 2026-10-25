@@ -250,8 +250,8 @@ html[lang="he"] .cs-acc .body q{ font-style:normal; }
 .cs-matrix-legend .cs-yes, .cs-matrix-legend .cs-no, .cs-matrix-legend .cs-part{ width:16px; height:16px; font-size:9px; }
 
 /* ---------- affinity board ---------- */
-.cs-affinity{ position:relative; height:200vh; margin-top:clamp(72px,9vw,120px); }
-.cs-affinity-stage{ position:sticky; top:calc(var(--nav-h) + 16px); height:calc(100vh - var(--nav-h) - 32px); display:flex; flex-direction:column; }
+.cs-affinity{ position:relative; margin-top:clamp(72px,9vw,120px); }
+.cs-affinity-stage{ position:relative; height:calc(100vh - var(--nav-h) - 32px); display:flex; flex-direction:column; }
 .cs-affinity-panel{ flex:1; display:flex; flex-direction:column; background:var(--cs-card); border-radius:40px; overflow:hidden; }
 .cs-affinity-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; padding:28px 32px 0; }
 .cs-affinity-title{ position:relative; height:1.2em; min-width:16ch; font-family:var(--cs-display); font-weight:600; letter-spacing:-0.03em; font-size:clamp(26px,3vw,38px); }

@@ -124,10 +124,16 @@
       start();
     }
 
+    /* 0 when the board first peeks in at the bottom of the screen,
+       1 when the board is centred in the viewport, so the notes are
+       already arranged by the time it reaches the middle */
+    var stage = section.querySelector(".cs-affinity-stage") || section;
     function progress() {
       var r = section.getBoundingClientRect();
-      var range = r.height - window.innerHeight;
-      return range > 0 ? clamp(-r.top / range, 0, 1) : 1;
+      var vh = window.innerHeight;
+      var endTop = (vh - stage.offsetHeight) / 2;
+      var range = vh - endTop;
+      return range > 0 ? clamp((vh - r.top) / range, 0, 1) : 1;
     }
 
     /* each note eases toward its own scroll-driven target, with a small
