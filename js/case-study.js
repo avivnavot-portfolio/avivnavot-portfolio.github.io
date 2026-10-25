@@ -372,7 +372,7 @@
   }
 
 
-  /* Jaco hero: the box stays pinned while you scroll, opens, and letters pop out */
+  /* Jakko hero: the box stays pinned while you scroll, opens, and letters pop out */
   function initJacoBox(wrap) {
     var pin = wrap.querySelector(".jc-pin"), stage = wrap.querySelector(".jc-stage");
     var closed = wrap.querySelector(".jc-closed"), open = wrap.querySelector(".jc-open");

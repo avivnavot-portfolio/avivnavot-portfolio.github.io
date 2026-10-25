@@ -814,7 +814,7 @@ body.bc{ --pj-accent:var(--c-orchid); }
 }
 @media (prefers-reduced-motion: reduce){ .bc-fl{ animation:none; } }
 
-/* ============ Jaco: box opens on scroll ============ */
+/* ============ Jakko: box opens on scroll ============ */
 .jc-scroll{ position:relative; margin-top:clamp(8px,2vw,24px); }
 .jc-pin{ position:relative; }
 .jc-scroll.on .jc-pin{ position:sticky; }
@@ -834,7 +834,7 @@ body.bc{ --pj-accent:var(--c-orchid); }
 @media (max-width:700px){ .jc-stage{ aspect-ratio:100/80; } .jc-closed{ width:60%; left:20%; top:34.5%; } .jc-open{ width:66%; left:22.9%; top:1.4%; } .jc-shadow{ left:19%; width:62%; top:90%; height:8%; } .jc-l{ font-size:clamp(22px,7vw,34px); } .jc-hint{ top:18%; } }
 @media (prefers-reduced-motion: reduce){ .jc-l b, .jc-hint span{ animation:none; } }
 
-/* ============ Jaco: how to play ============ */
+/* ============ Jakko: how to play ============ */
 .jc-rules{ margin-top:clamp(48px,6vw,84px); display:grid; gap:clamp(56px,7vw,96px); }
 .jc-goal{ display:grid; grid-template-columns:auto minmax(0,1fr); align-items:center; gap:clamp(28px,5vw,72px);
   background:var(--c-mist); border-radius:40px; padding:clamp(32px,5vw,64px) clamp(28px,6vw,80px); }
@@ -895,7 +895,7 @@ body.cs .jc-val.reveal, body.cs .jc-sq.reveal{
 }
 body.cs .jc-val.reveal.in:hover, body.cs .jc-sq.reveal.in:hover{ transform:translateY(-6px); }
 
-/* ============ Jaco: Hebrish ============ */
+/* ============ Jakko: Hebrish ============ */
 .jc-he{ font-family:'Heebo',var(--cs-body); font-weight:700; color:var(--c-orchid-ink); }
 .jc-hebrish{ margin-top:clamp(40px,5vw,72px); display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(20px,3vw,40px); align-items:center; }
 .jc-hb-demo{ background:var(--c-mist); border-radius:40px; padding:clamp(32px,4.5vw,64px); display:grid; gap:clamp(8px,1.2vw,16px); justify-items:start; }
@@ -909,7 +909,7 @@ body.cs .jc-val.reveal.in:hover, body.cs .jc-sq.reveal.in:hover{ transform:trans
 .jc-hb-fan img{ display:block; width:100%; height:auto; animation:jcBob 7s ease-in-out infinite; }
 @media (max-width:820px){ .jc-hebrish{ grid-template-columns:1fr; } .jc-hb-fan{ max-width:520px; margin-inline:auto; } }
 
-/* ============ Jaco: flip cards ============ */
+/* ============ Jakko: flip cards ============ */
 .jc-deck{ margin-top:clamp(40px,5vw,72px); display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:clamp(14px,2vw,26px); align-items:start; }
 .jc-flip{ all:unset; cursor:pointer; display:grid; gap:14px; -webkit-tap-highlight-color:transparent; }
 .jc-flip:focus-visible .jc-flip-in{ outline:3px solid var(--c-lime); outline-offset:4px; }
@@ -931,7 +931,7 @@ body.cs .jc-val.reveal.in:hover, body.cs .jc-sq.reveal.in:hover{ transform:trans
 @media (max-width:520px){ .jc-deck{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (prefers-reduced-motion: reduce){ .jc-hb-fan img, .jc-coin img{ animation:none; } }
 
-/* Jaco gallery: images at their own proportions (no crop, no hover zoom), smaller */
+/* Jakko gallery: images at their own proportions (no crop, no hover zoom), smaller */
 .jc-gallery{ max-width:820px; margin-inline:auto; display:grid; gap:16px; }
 .jc-g-row{ display:flex; gap:16px; align-items:flex-start; }
 .jc-g-row .cs-figure{ flex:var(--g) 1 0; min-width:0; aspect-ratio:var(--a); background:none; }

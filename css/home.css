@@ -49,8 +49,13 @@ body.home .site-footer{ background:transparent; }
 /* ---------- work: stacked cards ---------- */
 .hm-work{ position:relative; padding:clamp(110px, 17vh, 200px) 20px clamp(90px, 14vh, 170px); }
 .hm-stack{ max-width:1152px; margin-inline:auto; }
-.hm-slot{ position:sticky; top:calc(104px + var(--i, 0) * 34px); height:480px; margin-bottom:16vh; }
-.hm-slot:last-child{ margin-bottom:0; }
+.hm-slot{ position:sticky; top:calc(104px + var(--i, 0) * 34px); height:480px; }
+/* the gap sits above each next card (not below the previous one), and the stack keeps the same
+   gap after the last card, so Jakko lands on its spot over Blume like every other card;
+   the negative margin keeps the page length as it was */
+.hm-slot + .hm-slot{ margin-top:16vh; }
+.hm-stack::after{ content:""; display:block; height:16vh; }
+.hm-stack{ margin-bottom:-16vh; }
 .hm-card{
   display:grid; grid-template-columns:42% 58%; height:100%;
   border-radius:44px; overflow:hidden; background:var(--card); color:var(--ink); text-decoration:none;
@@ -116,7 +121,10 @@ body.home .site-footer{ background:transparent; }
   .hm-note{ align-self:flex-end; }
   .hm-dots{ margin-top:clamp(48px, 8vh, 80px); }
   .hm-work{ padding-top:clamp(80px, 12vh, 120px); }
-  .hm-slot{ top:calc(84px + var(--i, 0) * 14px); height:auto; margin-bottom:10vh; }
+  .hm-slot{ top:calc(84px + var(--i, 0) * 14px); height:auto; }
+  .hm-slot + .hm-slot{ margin-top:10vh; }
+  .hm-stack::after{ height:10vh; }
+  .hm-stack{ margin-bottom:-10vh; }
   .hm-card{ grid-template-columns:1fr; border-radius:32px; height:auto; }
   .hm-info{ padding:28px 26px 24px; }
   .hm-name-p{ margin-top:16px; font-size:36px; }
