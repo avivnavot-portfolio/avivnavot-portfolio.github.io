@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/case-study.css?v=35">
+<link rel="stylesheet" href="../css/case-study.css?v=38">
 <link rel="preload" as="image" href="../images/pinch/v2/home-loop-poster.jpg">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
@@ -406,11 +406,11 @@
         <div class="cs-card reveal">
           <span class="cs-label"><span class="en">Information architecture</span></span>
           <div class="cs-tabbar" aria-hidden="true">
-            <span><span class="en">Chefs</span></span>
-            <span><span class="en">Chats</span></span>
-            <span class="on"><span class="en">Home</span></span>
-            <span><span class="en">Saved</span></span>
             <span><span class="en">Profile</span></span>
+            <span><span class="en">Saved</span></span>
+            <span class="on"><span class="en">Home</span></span>
+            <span><span class="en">Chats</span></span>
+            <span><span class="en">Chefs</span></span>
           </div>
           <p class="d"><span class="en">Five tabs, with Home in the center. Conversations get their own tab, because in Pinch a chat is something you come back to, like a cooking session you saved.</span></p>
         </div>
@@ -423,8 +423,24 @@
             <span><span class="en">Recipe</span></span><i>→</i>
             <span class="end"><span class="en">Cook together</span></span>
           </div>
-          <p class="d"><span class="en">Every path ends in the same place: cooking together with a chef. The fridge photo, search and daily pick are shortcuts into that moment.</span></p>
+          <p class="d"><span class="en">Every path ends in the same place: cooking together with a chef.</span></p>
         </div>
+      </div>
+
+      <div class="cs-sub">
+        <h3 class="cs-h3 reveal"><span class="en">The full <em>sitemap.</em></span></h3>
+        <p class="cs-lede reveal"><span class="en">Before designing screens, I mapped what lives under each tab. Every item here is a real screen or popup in the Pinch prototype.</span></p>
+        <div class="cs-tree2 reveal" role="img" aria-label="Pinch sitemap as a tree: onboarding leads into the app; five tabs branch out, each with the screens under it">
+          <div class="t2-top"><span class="t2-pre"><span class="en">Onboarding · 4 screens</span></span><i aria-hidden="true"></i><span class="t2-root"><span class="en">Pinch</span></span></div>
+          <div class="t2-tabs">
+          <div class="t2-col"><span class="t2-tab"><span class="en">Profile</span></span><ul class="t2-branch"><li><span class="t"><span class="en">Sign in</span></span></li><li><span class="t"><span class="en">Recipes I created</span></span></li><li><span class="t"><span class="en">My shopping lists</span></span></li><li><span class="t"><span class="en">Payment &amp; subscriptions</span></span></li><li><span class="t"><span class="en">Updates</span></span></li></ul></div>
+          <div class="t2-col"><span class="t2-tab"><span class="en">Saved</span></span><ul class="t2-branch"><li><span class="t"><span class="en">Loved recipes</span></span><ul><li><span class="t"><span class="en">Recipe</span></span><ul><li class="go"><span class="t"><span class="en">Start cooking</span></span></li></ul></li></ul></li></ul></div>
+          <div class="t2-col on"><span class="t2-tab"><span class="en">Home</span></span><ul class="t2-branch"><li><span class="t"><span class="en">Daily picks</span></span></li><li><span class="t"><span class="en">Holiday recipes</span></span></li><li><span class="t"><span class="en">What’s in the kitchen</span></span><ul><li><span class="t"><span class="en">Voice note</span></span></li><li><span class="t"><span class="en">Receipt photo</span></span></li><li><span class="t"><span class="en">Fridge photo</span></span></li><li class="go"><span class="t"><span class="en">Suggested recipe</span></span></li></ul></li><li><span class="t"><span class="en">Cuisines</span></span><ul><li><span class="t"><span class="en">Moroccan · Italian · Mexican · Asian</span></span></li></ul></li><li><span class="t"><span class="en">Featured chefs</span></span></li><li><span class="t"><span class="en">Popular recipes</span></span></li></ul></div>
+          <div class="t2-col"><span class="t2-tab"><span class="en">Chats</span></span><ul class="t2-branch"><li><span class="t"><span class="en">Recipe chats with chefs</span></span></li><li><span class="t"><span class="en">My consultations</span></span></li><li><span class="t"><span class="en">Full conversation</span></span><ul><li><span class="t"><span class="en">Chef profile</span></span></li></ul></li></ul></div>
+          <div class="t2-col"><span class="t2-tab"><span class="en">Chefs</span></span><ul class="t2-branch"><li><span class="t"><span class="en">Chef team</span></span><ul><li><span class="t"><span class="en">Chef profile</span></span><ul><li><span class="t"><span class="en">Filter recipes</span></span></li><li><span class="t"><span class="en">Recipe</span></span><ul><li><span class="t"><span class="en">Shopping list</span></span></li><li><span class="t"><span class="en">Recipe steps</span></span></li></ul></li><li class="go"><span class="t"><span class="en">Start a chat</span></span></li></ul></li></ul></li></ul></div>
+          </div>
+          <p class="t2-key"><span class="go-dot" aria-hidden="true"></span><span class="en">Leads into cooking together with a chef.</span></p>
+          </div>
       </div>
 
       <div class="cs-sub cs-convo">
