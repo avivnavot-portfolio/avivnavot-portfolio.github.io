@@ -102,9 +102,9 @@ body.home .site-footer{ background:transparent; }
   position:absolute; left:4.904%; top:1.888%; width:calc(100% - 4.904% - 4.816%); height:calc(100% - 1.888% - 2.103%);
   object-fit:cover; border-radius:14.55% / 6.71%; display:block;
 }
-.hm-phone.p-c{ width:33%; left:33.5%; top:8%; z-index:3; }
-.hm-phone.p-l{ width:27.5%; left:5.5%; top:21%; z-index:2; transition-delay:.05s; }
-.hm-phone.p-r{ width:27.5%; left:67%; top:21%; z-index:2; transition-delay:.1s; }
+.hm-phone.p-c{ width:30%; left:35%; top:auto; bottom:6%; z-index:3; }
+.hm-phone.p-l{ width:25%; left:7%; top:auto; bottom:11%; z-index:2; transition-delay:.05s; }
+.hm-phone.p-r{ width:25%; left:68%; top:auto; bottom:11%; z-index:2; transition-delay:.1s; }
 
 /* Kiddoz: two phones floating in the air */
 .hm-air{ background:none; }

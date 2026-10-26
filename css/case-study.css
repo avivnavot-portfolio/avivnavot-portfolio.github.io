@@ -999,3 +999,18 @@ body.cs .jc-g-row .cs-figure:hover img{ transform:none; }
   .t2-tabs{ margin-left:24px; padding-top:6px; }
 }
 @media (max-width:420px){ .cs-tree2 li .t{ white-space:normal; } }
+
+/* hero: subtitle and lede share one left edge */
+.cs-hero-copy{ width:fit-content; max-width:100%; margin:0 auto; }
+.cs-hero-copy .cs-lede{ width:0; min-width:100%; max-width:none; margin-left:0; margin-right:0; }
+
+/* Pinch screens: no panel, more air, gentle centred zoom on hover */
+.cs-phones-panel.is-open{ background:none; padding:0; border-radius:0; }
+@media (min-width:1280px){ .cs-phones-panel.is-open{ margin-inline:-70px; padding:0; } }
+.is-open .cs-phones{ gap:clamp(20px,2.8vw,44px); row-gap:56px; }
+.is-open .cs-phone{ gap:0; transform:none !important; }
+.is-open .cs-phone .shell{ transform-origin:50% 50%; transition:transform .7s cubic-bezier(.22,1,.36,1); will-change:transform; }
+.is-open .cs-phone .shell::after{ filter:drop-shadow(0 22px 22px rgba(30,30,35,.26)) !important; }
+.is-open .cs-phone .t{ font-size:19px; margin-top:26px; letter-spacing:-0.01em; }
+.is-open .cs-phone .d{ font-size:15px; line-height:1.6; margin-top:8px; }
+@media (hover:hover){ .is-open .cs-phone:hover .shell{ transform:scale(1.045); } }
