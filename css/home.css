@@ -111,8 +111,10 @@ body.home .site-footer{ background:transparent; }
 /* Kiddoz: two phones floating in the air */
 .hm-air{ background:none; }
 .hm-air .hm-phone::after{ filter:drop-shadow(0 30px 30px rgba(60,40,90,.28)); }
-.hm-phone.k-a{ width:26%; left:22%; top:14%; rotate:-14deg; z-index:2; animation:hmAir 6s ease-in-out infinite; }
-.hm-phone.k-b{ width:26%; left:50%; top:5%; rotate:11deg; z-index:3; animation:hmAir 6s ease-in-out infinite -3s; }
+.hm-phones.hm-air{ container-type:size; --u:min(1cqw, 1.4cqh); }
+/* both phones are centred as a group: equal space above and below at rest, room left for the float + hover lift */
+.hm-phone.k-a{ width:calc(24 * var(--u)); left:calc(50% - 27 * var(--u)); top:calc(50% - 21.65 * var(--u)); rotate:-14deg; z-index:2; animation:hmAir 6s ease-in-out infinite; }
+.hm-phone.k-b{ width:calc(24 * var(--u)); left:50%; top:calc(50% - 27.65 * var(--u)); rotate:11deg; z-index:3; animation:hmAir 6s ease-in-out infinite -3s; }
 @keyframes hmAir{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
 @media (prefers-reduced-motion: reduce){ .hm-phone.k-a, .hm-phone.k-b{ animation:none; } }
 

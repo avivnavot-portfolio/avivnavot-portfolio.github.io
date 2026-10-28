@@ -1051,3 +1051,7 @@ br.d-br{ display:none; } @media (min-width:900px){ br.d-br{ display:inline; } }
 .pf-cap{ margin-top:72px; font-size:15px; color:var(--cs-soft); text-align:center; }
 @media (max-width:560px){ .pf-notif{ padding:12px 14px 12px 12px; gap:11px; border-radius:24px; } .pf-app{ width:40px; height:40px; border-radius:10px; } .pf-txt b{ font-size:15.5px; } .pf-txt span{ font-size:14px; } .pf-time{ font-size:12.5px; } .pf-cap{ margin-top:48px; } }
 @media (prefers-reduced-motion: reduce){ .pf-notif{ transition:none; opacity:1; translate:-50% 25%; scale:1; filter:none; } }
+
+/* kiddoz: final screens sit in one straight row, with a second row of more screens below */
+.cs-phones.kz-flat .cs-phone:nth-child(even){ margin-top:0; }
+.cs-phones.kz-more{ margin-top:clamp(72px,9vw,128px); }
