@@ -12,8 +12,10 @@ body.home .site-footer{ background:transparent; }
 .hm-orbit{ position:absolute; inset:0; }
 .hm-orbit i{ position:absolute; border-radius:50%; will-change:transform; animation:hmDrift 16s ease-in-out infinite; }
 .hm-orbit i:nth-child(1){ width:70vmax; height:70vmax; left:-22vmax; top:-30vmax; background:radial-gradient(circle, rgba(197,164,245,.52), rgba(197,164,245,0) 64%); --tx:7vmax; --ty:6vmax; }
-.hm-orbit i:nth-child(2){ width:62vmax; height:62vmax; right:-24vmax; top:-14vmax; background:radial-gradient(circle, rgba(199,255,56,.40), rgba(199,255,56,0) 62%); --tx:-6vmax; --ty:8vmax; animation-delay:-4s; }
-.hm-orbit i:nth-child(3){ width:64vmax; height:64vmax; right:-16vmax; bottom:-34vmax; background:radial-gradient(circle, rgba(167,123,232,.32), rgba(167,123,232,0) 64%); --tx:-8vmax; --ty:-6vmax; animation-delay:-8s; }
+.hm-orbit i:nth-child(2){ display:none; }
+/* the left glow drifts up and fades a little as the page scrolls (never below half) */
+.hm-orbit i:nth-child(1){ translate:0 calc(var(--sp, 0) * -16vmax); opacity:calc(1 - var(--sp, 0) * .4); }
+.hm-orbit i:nth-child(3){ display:none; }
 .hm-orbit i:nth-child(4){ width:46vmax; height:46vmax; left:22vmax; top:6vmax; background:radial-gradient(circle, rgba(245,240,255,.85), rgba(245,240,255,0) 68%); --tx:6vmax; --ty:-5vmax; animation-delay:-12s; }
 .hm-orbit i:nth-child(5){ display:none; }
 @keyframes hmDrift{
@@ -137,4 +139,38 @@ body.home .site-footer{ background:transparent; }
 }
 @media (prefers-reduced-motion: reduce){
   .hm-orbit i{ animation:none; }
+}
+
+/* green aura: a small soft glow with a trailing tail that follows the cursor */
+.hm-glow{ position:absolute; inset:0; }
+.hm-glow i{ position:absolute; left:0; top:0; width:var(--s); height:var(--s); margin:calc(var(--s) / -2) 0 0 calc(var(--s) / -2); border-radius:50%;
+  background:radial-gradient(circle, rgba(199,255,56,.55) 0%, rgba(199,255,56,.26) 38%, rgba(199,255,56,0) 70%); will-change:transform, opacity; opacity:0; }
+
+/* hero note: two lines */
+.hm-note{ line-height:1.4; text-align:left; }
+.hm-note [data-cursor]{ white-space:nowrap; }
+
+/* ---------- hero entrance ----------
+   1. "Hello!" and the row of dots roll up together (slot-machine style)
+   2. "I'm Aviv" rises softly out of a blur
+   3. right after, the note types itself in */
+.hm-hello{ -webkit-mask-image:linear-gradient(transparent, #000 .22em, #000 calc(100% - .18em), transparent); mask-image:linear-gradient(transparent, #000 .22em, #000 calc(100% - .18em), transparent);
+  padding-block:.3em; margin-block:-.3em; }
+.hm-dots{ clip-path:inset(-300px -50px 0 -50px); }   /* dots rise from behind the row's baseline, like the letters */
+.hm-dots.is-done{ clip-path:none; }
+.hm-intro .hm-hello .lt, .hm-intro .hm-name, .hm-intro .hm-dot{ opacity:0; }
+.hm-in .hm-hello .lt, .hm-in .hm-dot{ animation:hmRoll .65s cubic-bezier(.34,1.32,.64,1) both; animation-delay:calc(.25s + var(--n) * 30ms); }
+@keyframes hmRoll{ 0%{ opacity:0; translate:0 100%; } 15%{ opacity:1; } 100%{ opacity:1; translate:0 0; } }
+.hm-in .hm-dot{ translate:none; }
+@keyframes hmRollDot{ 0%{ opacity:0; translate:0 calc(var(--d) * 1.6); } 15%{ opacity:1; } 100%{ opacity:1; translate:0 0; } }
+.hm-in .hm-dot{ animation-name:hmRollDot; }
+.hm-in .hm-name{ animation:hmRise 1.7s cubic-bezier(.22,.8,.24,1) var(--name-delay, 1.7s) both; }
+@keyframes hmRise{ from{ opacity:0; translate:0 .18em; filter:blur(14px); } to{ opacity:1; translate:0 0; filter:blur(0); } }
+/* typewriter note */
+.hm-note.is-typing .lt{ visibility:hidden; }
+.hm-note.is-typing .lt.on{ visibility:visible; }
+.hm-caret{ display:inline-block; width:2px; height:1.05em; margin-left:2px; vertical-align:-.15em; background:var(--c-orchid); animation:twBlink 1s steps(1) infinite; }
+@media (prefers-reduced-motion: reduce){
+  .hm-intro .hm-hello .lt, .hm-intro .hm-name, .hm-intro .hm-dot{ opacity:1; animation:none; }
+  .hm-glow{ display:none; }
 }

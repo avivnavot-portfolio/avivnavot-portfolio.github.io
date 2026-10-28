@@ -146,7 +146,6 @@ html[lang="he"] .cs-h3{ letter-spacing:-0.01em; }
 .cs-hero h1{
   font-family:var(--cs-display); font-weight:600; letter-spacing:-0.045em; color:var(--cs-ink);
   font-size:clamp(38px,5.4vw,78px); line-height:1.02; margin:0 auto; max-width:19ch; text-wrap:balance;
-  min-height:3em;
 }
 html[lang="he"] .cs-hero h1{ letter-spacing:-0.02em; line-height:1.08; }
 .cs-hero h1 em{ font-style:normal; color:var(--pj-accent); }
@@ -516,6 +515,8 @@ body.cs.js-reveal .reveal:not(.in){ opacity:0; transform:translateY(44px) scale(
 .cs-cursor.is-text{ width:40px; height:40px; margin:-20px 0 0 -20px; background:rgba(197,164,245,.45); mix-blend-mode:multiply; }
 .cs-cursor.is-link{ width:46px; height:46px; margin:-23px 0 0 -23px; background:var(--c-lime); mix-blend-mode:multiply; }
 .cs-cursor.is-hidden{ opacity:0; }
+.cs-cursor.is-text[data-c="lime"]{ background:rgba(199,255,56,.85); }
+.cs-cursor.is-text[data-c="lilac"]{ background:rgba(167,123,232,.75); }
 
 /* hero subtitle */
 .cs-hero-sub{ margin:clamp(20px,2.4vw,28px) auto 0; font-family:var(--cs-display); font-weight:500; letter-spacing:-0.02em;
@@ -941,11 +942,12 @@ body.cs .jc-g-row .cs-figure:hover img{ transform:none; }
 
 /* ============ Pinch: subscription plans ============ */
 .cs-plan{ display:flex; flex-direction:column; }
+body.cs .cs-plan.reveal{ transition:opacity 1.1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1), translate .4s var(--ease), background .4s var(--ease), box-shadow .4s var(--ease); transition-delay:var(--rd,0ms); }
 .cs-plan .price{ margin-top:18px; font-family:var(--cs-display); font-weight:600; letter-spacing:-0.035em; font-size:clamp(34px,3.4vw,46px); line-height:1; color:var(--cs-ink); }
 .cs-plan .price small{ font-size:15px; font-weight:500; letter-spacing:0; color:var(--cs-soft); margin-left:6px; }
 .cs-plan .tag{ margin-top:12px; font-size:16px; line-height:1.45; color:var(--cs-soft); min-height:2.9em; }
 .cs-plan .cs-kpi-list li{ font-size:15.5px; padding:12px 0; }
-.cs-plan.is-top{ background:var(--c-mist); box-shadow:inset 0 0 0 1px var(--c-lilac); }
+@media (hover:hover){ .cs-plan:hover{ translate:0 -4px; background:var(--c-mist); box-shadow:inset 0 0 0 1px var(--c-lilac), 0 22px 40px -26px rgba(118,80,194,.45); } }
 /* plans run a little wider than the text column so no line wraps awkwardly */
 .cs-plans{ margin-inline:calc(50% - min(560px, 50vw - 20px)); }
 .cs-plan .cs-label{ align-self:flex-start; background:var(--c-lime); color:var(--cs-ink); font-weight:600; padding:6px 14px; border-radius:999px; }
@@ -1001,8 +1003,16 @@ body.cs .jc-g-row .cs-figure:hover img{ transform:none; }
 @media (max-width:420px){ .cs-tree2 li .t{ white-space:normal; } }
 
 /* hero: subtitle and lede share one left edge */
-.cs-hero-copy{ width:fit-content; max-width:100%; margin:0 auto; }
-.cs-hero-copy .cs-lede{ width:0; min-width:100%; max-width:none; margin-left:0; margin-right:0; }
+/* hero copy: the description takes the width of the title / subtitle (whichever is wider), set in case-study.js */
+@media (min-width:900px){
+  .cs-hero-copy .cs-hero-sub{ width:max-content; max-width:min(1000px, 100vw - 48px); margin-left:50%; translate:-50% 0; }
+  .cs-hero-copy.is-fit .cs-hero-sub{ margin-left:calc(50% - var(--copy-w) / 2); translate:none; }
+  .cs-hero-copy.is-fit .cs-lede{ max-width:none; width:var(--copy-w); margin-left:calc(50% - var(--copy-w) / 2); margin-right:0; }
+}
+/* subtitle sits flush left, on the same edge as the description */
+.cs-hero-copy .cs-hero-sub{ text-align:left; }
+@media (max-width:899px){ .cs-hero-copy .cs-hero-sub{ margin-left:0; margin-right:0; } }
+br.d-br{ display:none; } @media (min-width:900px){ br.d-br{ display:inline; } }
 
 /* Pinch screens: no panel, more air, gentle centred zoom on hover */
 .cs-phones-panel.is-open{ background:none; padding:0; border-radius:0; }
@@ -1014,3 +1024,26 @@ body.cs .jc-g-row .cs-figure:hover img{ transform:none; }
 .is-open .cs-phone .t{ font-size:19px; margin-top:26px; letter-spacing:-0.01em; }
 .is-open .cs-phone .d{ font-size:15px; line-height:1.6; margin-top:8px; }
 @media (hover:hover){ .is-open .cs-phone:hover .shell{ transform:scale(1.045); } }
+
+/* research proof: the note to Assaf, and his reply arriving as an iOS notification */
+.cs-proof{ margin-top:clamp(48px,6vw,80px); display:flex; flex-direction:column; align-items:center; }
+.pf-photo{ position:relative; margin:0; width:min(560px,92%); }
+.pf-photo > img{ display:block; width:100%; height:auto; border-radius:24px; box-shadow:0 34px 70px -38px rgba(53,54,59,.5); }
+.pf-notif{ position:absolute; left:50%; bottom:0; width:min(94%,540px); display:flex; align-items:center; gap:16px; padding:17px 20px 17px 17px;
+  border-radius:34px; color:#fff; font-family:-apple-system,"SF Pro Text",Inter,system-ui,sans-serif;
+  background:linear-gradient(180deg,rgba(255,255,255,.30),rgba(255,255,255,.14));
+  -webkit-backdrop-filter:blur(20px) saturate(185%) brightness(1.05); backdrop-filter:blur(20px) saturate(185%) brightness(1.05);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65), inset 0 -1px 0 rgba(255,255,255,.18), inset 0 0 0 1px rgba(255,255,255,.28), 0 18px 40px -16px rgba(0,0,0,.45);
+  opacity:0; translate:-50% -55%; scale:.86; filter:blur(10px); transform-origin:50% 0%;
+  transition:opacity .45s ease, translate 1.1s cubic-bezier(.2,1.35,.35,1), scale 1.1s cubic-bezier(.2,1.35,.35,1), filter .6s ease; }
+.pf-notif::before{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background:radial-gradient(120% 90% at 18% -10%, rgba(255,255,255,.35), rgba(255,255,255,0) 55%); mix-blend-mode:screen; }
+.cs-proof.in .pf-notif{ opacity:1; translate:-50% 25%; scale:1; filter:blur(0); }   /* a quarter of it sits below the photo */
+.pf-app{ width:57px; height:57px; flex:none; border-radius:13px; position:relative; }
+.pf-txt{ display:flex; flex-direction:column; min-width:0; flex:1; line-height:1.25; text-shadow:0 1px 2px rgba(0,0,0,.2); position:relative; }
+.pf-txt b{ font-size:22px; font-weight:600; letter-spacing:-.01em; }
+.pf-txt span{ font-size:20px; text-align:left; unicode-bidi:isolate; }
+.pf-time{ align-self:flex-start; font-size:17px; opacity:.8; position:relative; margin-top:3px; }
+.pf-cap{ margin-top:72px; font-size:15px; color:var(--cs-soft); text-align:center; }
+@media (max-width:560px){ .pf-notif{ padding:12px 14px 12px 12px; gap:11px; border-radius:24px; } .pf-app{ width:40px; height:40px; border-radius:10px; } .pf-txt b{ font-size:15.5px; } .pf-txt span{ font-size:14px; } .pf-time{ font-size:12.5px; } .pf-cap{ margin-top:48px; } }
+@media (prefers-reduced-motion: reduce){ .pf-notif{ transition:none; opacity:1; translate:-50% 25%; scale:1; filter:none; } }

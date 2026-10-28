@@ -6,26 +6,34 @@
 (function () {
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- split text into letters ---------- */
+  /* ---------- split text into letters (keeps inline elements such as <span data-cursor> and <br>) ---------- */
   function splitLetters(el) {
     var letters = [];
-    var words = el.textContent.split(/(\s+)/);
-    el.textContent = "";
-    words.forEach(function (w) {
-      if (/^\s+$/.test(w)) { el.appendChild(document.createTextNode(" ")); return; }
-      if (!w) return;
-      var ws = document.createElement("span");
-      ws.className = "lw";
-      w.split("").forEach(function (c) {
-        var s = document.createElement("span");
-        s.className = "lt";
-        s.textContent = c;
-        ws.appendChild(s);
-        letters.push(s);
+    el.setAttribute("aria-label", el.textContent.replace(/\s+/g, " ").trim());
+    function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (n) {
+        if (n.nodeType === 1) { if (n.tagName !== "BR") walk(n); return; }
+        if (n.nodeType !== 3) return;
+        var frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(function (w) {
+          if (!w) return;
+          if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(" ")); return; }
+          var ws = document.createElement("span");
+          ws.className = "lw";
+          ws.setAttribute("aria-hidden", "true");
+          w.split("").forEach(function (c) {
+            var s = document.createElement("span");
+            s.className = "lt";
+            s.textContent = c;
+            ws.appendChild(s);
+            letters.push(s);
+          });
+          frag.appendChild(ws);
+        });
+        node.replaceChild(frag, n);
       });
-      el.appendChild(ws);
-    });
-    el.setAttribute("aria-label", words.join(""));
+    }
+    walk(el);
     return letters;
   }
 
@@ -52,6 +60,7 @@
       while (dots.length < n) {
         var el = document.createElement("span");
         el.className = "hm-dot";
+        el.style.setProperty("--n", dots.length);
         row.appendChild(el);
         dots.push({ el: el, t: -1, hov: false, hs: 0, h: 0 });
       }
@@ -166,8 +175,114 @@
     window.addEventListener("resize", onScroll);
   }
 
+  /* ---------- 3. hero entrance ---------- */
+  function initIntro() {
+    var hero = document.querySelector(".hm-hero");
+    if (!hero) return;
+    hero.querySelectorAll(".hm-hello .lt").forEach(function (l, i) { l.style.setProperty("--n", i); });
+    var note = hero.querySelector(".hm-note"), row = hero.querySelector(".hm-dots");
+    if (note && !reduce) note.classList.add("is-typing");
+    var started = false;
+    function go() {
+      if (started) return; started = true;
+      /* "I'm Aviv" waits until the last dot has rolled in (0.25s start, 30ms apart, 0.65s each) */
+      var n = row ? row.querySelectorAll(".hm-dot").length : 0;
+      var dotsEnd = 0.25 + Math.max(0, n - 1) * 0.03 + 0.65;
+      var nameDelay = Math.max(0.9, dotsEnd - 0.45);   /* starts while the last dots are still landing */
+      hero.style.setProperty("--name-delay", nameDelay.toFixed(2) + "s");
+      hero.classList.add("hm-in");
+      setTimeout(function () { if (row) row.classList.add("is-done"); }, dotsEnd * 1000 + 100);
+      if (note && !reduce) setTimeout(function () { typeNote(note); }, (nameDelay + 0.75) * 1000);   /* while "I'm Aviv" is halfway in */
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { window.requestAnimationFrame(go); });
+    setTimeout(go, 1200);
+  }
+
+  /* typewriter: letter by letter, with a blinking caret that leaves at the end */
+  function typeNote(note) {
+    var letters = Array.prototype.slice.call(note.querySelectorAll(".lt"));
+    var caret = document.createElement("span");
+    caret.className = "hm-caret"; caret.setAttribute("aria-hidden", "true");
+    var i = 0;
+    (function step() {
+      if (i >= letters.length) {
+        note.classList.remove("is-typing");
+        setTimeout(function () { caret.remove(); }, 1600);
+        return;
+      }
+      var l = letters[i++];
+      l.classList.add("on");
+      l.parentNode.insertBefore(caret, l.nextSibling);
+      var ch = l.textContent, next = letters[i];
+      var pause = /[,.]/.test(ch) ? 260 : (next && next.parentNode !== l.parentNode ? 70 : 38);
+      setTimeout(step, pause);
+    })();
+  }
+
+  /* ---------- 4. green aura: a small soft glow, with a flame-like trail behind it ---------- */
+  function initGlow() {
+    var host = document.querySelector(".hm-glow");
+    if (!host || reduce) return;
+    var fine = window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    var N = 16, parts = [];
+    for (var i = 0; i < N; i++) {
+      var el = document.createElement("i");
+      var size = Math.round(260 - i * (190 / (N - 1)));      /* head 260px, tail tapering to ~70px */
+      el.style.setProperty("--s", size + "px");
+      host.appendChild(el);
+      parts.push({ el: el, x: 0, y: 0 });
+    }
+    var tx = window.innerWidth * 0.8, ty = window.innerHeight * 0.3, speed = 0, lastX = tx, lastY = ty, t0 = performance.now(), seen = true, vis = 0;
+    parts.forEach(function (p) { p.x = tx; p.y = ty; });
+    if (fine) window.addEventListener("pointermove", function (e) { tx = e.clientX; ty = e.clientY; seen = true; }, { passive: true });
+    document.addEventListener("mouseleave", function () { seen = false; });
+    (function frame(now) {
+      var head = parts[0];
+      head.x += (tx - head.x) * 0.12; head.y += (ty - head.y) * 0.12;          /* slight delay behind the cursor */
+      var v = Math.hypot(head.x - lastX, head.y - lastY); lastX = head.x; lastY = head.y;
+      speed += (Math.min(1, v / 26) - speed) * 0.08;                             /* eases out slowly, so the trail lingers */
+      var tsec = (now - t0) / 1000;
+      for (var i = 1; i < N; i++) {                                              /* each part trails the one before it */
+        var p = parts[i], q = parts[i - 1];
+        p.x += (q.x - p.x) * 0.3; p.y += (q.y - p.y) * 0.3;
+        p.y -= speed * 0.35 * (i / N);                                           /* a flame licks slightly upward */
+        p.x += Math.sin(tsec * 6 + i * 0.9) * speed * 0.6;                       /* and flickers a little */
+      }
+      var breathe = 1 + Math.sin(tsec * 1.7) * 0.07 + Math.sin(tsec * 0.8 + 1.1) * 0.04;
+      vis += ((seen ? 1 : 0) - vis) * 0.05;
+      var base = (fine ? 1 : 0.85) * vis;
+      parts.forEach(function (p, i) {
+        var k = i / (N - 1);
+        var s = i === 0 ? breathe * (1 + speed * 0.3) : (0.75 + speed * 0.45) * (1 + Math.sin(tsec * 3 + i) * 0.05);
+        var o = i === 0 ? base : base * Math.min(1, speed * 1.6) * (1 - k) * 0.85;
+        p.el.style.transform = "translate3d(" + p.x.toFixed(1) + "px," + p.y.toFixed(1) + "px,0) scale(" + s.toFixed(3) + ")";
+        p.el.style.opacity = o.toFixed(3);
+      });
+      window.requestAnimationFrame(frame);
+    })(performance.now());
+  }
+
+    /* scroll progress (0 at top, 1 at the bottom) drives the left glow */
+  function initSkyScroll() {
+    var sky = document.querySelector(".hm-orbit i");
+    if (!sky) return;
+    var raf = 0;
+    function upd() {
+      raf = 0;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      var t = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      sky.style.setProperty("--sp", t.toFixed(4));
+    }
+    function req() { if (!raf) raf = requestAnimationFrame(upd); }
+    window.addEventListener("scroll", req, { passive: true });
+    window.addEventListener("resize", req);
+    upd();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initDots();
+    initIntro();
+    initGlow(); initSkyScroll();
     initStack();
   });
 })();

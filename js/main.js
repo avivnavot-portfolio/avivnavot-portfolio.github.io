@@ -117,10 +117,45 @@
     window.addEventListener("resize", onScroll);
   }
 
+  /* typography: a paragraph never ends with a line of fewer than three words
+     (the last three words are tied together with non-breaking spaces) */
+  function noOrphans() {
+    var els = document.querySelectorAll("main p, main li, main figcaption, main blockquote, footer p, .cs-lede");
+    Array.prototype.forEach.call(els, function (el) {
+      if (el.closest("[data-words], [data-typewriter], .hm-note") || el.querySelector(".lt, .w, br + br")) return;
+      var roots = el.querySelectorAll(":scope > .en, :scope > .he");
+      if (!roots.length) roots = [el];
+      Array.prototype.forEach.call(roots, tie);
+    });
+    function tie(root) {
+      var nodes = [], w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), n;
+      while ((n = w.nextNode())) nodes.push(n);
+      var seenWord = false, inGap = false, gaps = 0;
+      for (var k = nodes.length - 1; k >= 0 && gaps < 3; k--) {
+        var t = nodes[k].nodeValue.split(""), changed = false;
+        for (var i = t.length - 1; i >= 0; i--) {
+          var c = t[i], space = /\s/.test(c) && c !== "\u00A0";
+          if (space) {
+            if (!seenWord) continue;                 /* trailing whitespace */
+            if (gaps >= 2) { gaps = 3; break; }      /* two gaps tied: done */
+            if (!inGap) { t[i] = "\u00A0"; inGap = true; } else { t[i] = ""; }
+            changed = true;
+          } else {
+            if (inGap) { inGap = false; gaps++; }
+            if (c === "-") { t[i] = "\u2011"; changed = true; }   /* no line break inside a hyphenated last word either */
+            seenWord = true;
+          }
+        }
+        if (changed) nodes[k].nodeValue = t.join("");
+      }
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLang();
     initReveal();
     initNav();
     initChapters();
+    noOrphans();
   });
 })();
