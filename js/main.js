@@ -120,7 +120,7 @@
   /* typography: a paragraph never ends with a line of fewer than three words
      (the last three words are tied together with non-breaking spaces) */
   function noOrphans() {
-    var els = document.querySelectorAll("main p, main li, main figcaption, main blockquote, footer p, .cs-lede");
+    var els = document.querySelectorAll("main p, main li, main figcaption, main blockquote, footer p, .cs-lede, main .d, main .cs-caption");
     Array.prototype.forEach.call(els, function (el) {
       if (el.closest("[data-words], [data-typewriter], .hm-note") || el.querySelector(".lt, .w, br + br")) return;
       var roots = el.querySelectorAll(":scope > .en, :scope > .he");

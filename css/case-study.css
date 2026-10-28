@@ -1055,3 +1055,9 @@ br.d-br{ display:none; } @media (min-width:900px){ br.d-br{ display:inline; } }
 /* kiddoz: final screens sit in one straight row, with a second row of more screens below */
 .cs-phones.kz-flat .cs-phone:nth-child(even){ margin-top:0; }
 .cs-phones.kz-more{ margin-top:clamp(72px,9vw,128px); }
+
+/* kiddoz: onboarding loop next to a short intro */
+.kz-onb{ display:grid; grid-template-columns:minmax(0,1fr) minmax(220px,300px); gap:clamp(32px,6vw,96px); align-items:center; max-width:880px; margin-inline:auto; }
+.kz-onb .cs-lede{ margin-top:16px; }
+.kz-onb-phone .screen video{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width:720px){ .kz-onb{ grid-template-columns:1fr; } .kz-onb-phone{ width:min(260px,70%); margin-inline:auto; } }
