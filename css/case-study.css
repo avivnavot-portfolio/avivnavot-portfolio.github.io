@@ -736,6 +736,10 @@ body.resume{ padding-top:0; }
 .rs-item p{ margin:4px 0 0; font-size:14.5px; line-height:1.6; color:var(--cs-soft); }
 .rs-proj{ display:inline-block; font-size:15px; font-weight:600; color:var(--cs-ink); text-decoration:none; background-image:linear-gradient(var(--c-lime),var(--c-lime)); background-repeat:no-repeat; background-size:100% 2px; background-position:0 100%; transition:background-size .4s cubic-bezier(.16,1,.3,1); }
 .rs-proj:hover{ background-size:100% 100%; }
+.rs-bul{ list-style:disc outside !important; margin:6px 0 0; padding-left:18px !important; font-size:14.5px; line-height:1.6; color:var(--cs-soft); }
+.rs-bul li{ display:list-item !important; margin:2px 0; }
+.rs-bul + .rs-award{ margin-top:8px; }
+.rs-bul li::marker{ color:var(--cs-accent, #c5a4f5); }
 .rs-award{ font-weight:500; color:var(--cs-ink) !important; }
 @media (max-width:760px){ .rs-cols{ grid-template-columns:1fr; } .rs-main{ padding-left:22px; } .rs-main .rs-sec::before{ left:-27px; } .rs-bar{ padding:22px; } }
 .rs-doc, .rs-doc h2, .rs-doc h3, .rs-bar h1{ font-family:var(--cs-display); }
