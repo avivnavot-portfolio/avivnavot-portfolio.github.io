@@ -311,6 +311,7 @@
       dot.classList.remove("is-hidden");
       var t = e.target;
       var isLink = t.closest && t.closest(linkSel);
+      if (isLink && isLink.closest(".kz-onb-phone")) isLink = null;   /* the onboarding loop is not clickable */
       var isText = !isLink && t.closest && t.closest(textSel);
       dot.classList.toggle("is-link", !!isLink);
       dot.classList.toggle("is-text", !!isText);

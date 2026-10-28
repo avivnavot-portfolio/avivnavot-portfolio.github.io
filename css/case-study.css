@@ -1061,3 +1061,7 @@ br.d-br{ display:none; } @media (min-width:900px){ br.d-br{ display:inline; } }
 .kz-onb .cs-lede{ margin-top:16px; }
 .kz-onb-phone .screen video{ width:100%; height:100%; object-fit:cover; display:block; }
 @media (max-width:720px){ .kz-onb{ grid-template-columns:1fr; } .kz-onb-phone{ width:min(260px,70%); margin-inline:auto; } }
+/* the onboarding loop is not interactive: no lift, no lime glow */
+.kz-onb-phone, .kz-onb-phone:hover{ transform:none !important; }
+.kz-onb-phone:hover .shell{ transform:none !important; box-shadow:none !important; }
+.kz-onb-phone .shell::after, .kz-onb-phone:hover .shell::after{ filter:drop-shadow(0 22px 22px rgba(30,30,35,.26)) !important; }
