@@ -123,7 +123,7 @@ body.home .site-footer{ background:transparent; }
   -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 26%); mask-image:linear-gradient(90deg, transparent 0, #000 26%);
 }
 .hm-blume .hm-phone::after{ filter:drop-shadow(0 28px 28px rgba(30,2,14,.45)); }
-.hm-phone.b-t{ width:calc(25 * var(--u)); left:calc(50% - 42 * var(--u)); top:calc(50% - 25.5 * var(--u)); rotate:-7deg; z-index:3; animation:hmAir 6s ease-in-out infinite; }
+.hm-phone.b-t{ width:calc(25 * var(--u)); left:calc(50% - 42 * var(--u)); top:calc(50% - 25.5 * var(--u)); z-index:3; animation:hmAir 6s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce){ .hm-phone.k-a, .hm-phone.k-b, .hm-phone.b-t{ animation:none; } }
 
 /* ---------- mobile ---------- */
