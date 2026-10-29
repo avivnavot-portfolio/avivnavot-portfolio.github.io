@@ -116,7 +116,15 @@ body.home .site-footer{ background:transparent; }
 .hm-phone.k-a{ width:calc(24 * var(--u)); left:calc(50% - 27 * var(--u)); top:calc(50% - 21.65 * var(--u)); rotate:-14deg; z-index:2; animation:hmAir 6s ease-in-out infinite; }
 .hm-phone.k-b{ width:calc(24 * var(--u)); left:50%; top:calc(50% - 27.65 * var(--u)); rotate:11deg; z-index:3; animation:hmAir 6s ease-in-out infinite -3s; }
 @keyframes hmAir{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-12px); } }
-@media (prefers-reduced-motion: reduce){ .hm-phone.k-a, .hm-phone.k-b{ animation:none; } }
+/* Blume & Co: the logo shifts right and the tracking screen floats beside it */
+.hm-blume{ container-type:size; --u:min(1cqw, 1.4cqh); }
+.hm-media.hm-blume > img{
+  position:absolute; top:0; right:-12%; width:auto; height:100%; aspect-ratio:1600/1131;
+  -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 26%); mask-image:linear-gradient(90deg, transparent 0, #000 26%);
+}
+.hm-blume .hm-phone::after{ filter:drop-shadow(0 28px 28px rgba(30,2,14,.45)); }
+.hm-phone.b-t{ width:calc(25 * var(--u)); left:calc(50% - 42 * var(--u)); top:calc(50% - 25.5 * var(--u)); rotate:-7deg; z-index:3; animation:hmAir 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce){ .hm-phone.k-a, .hm-phone.k-b, .hm-phone.b-t{ animation:none; } }
 
 /* ---------- mobile ---------- */
 @media (max-width:820px){
