@@ -108,6 +108,14 @@ body.home .site-footer{ background:transparent; }
 .hm-phone.p-l{ width:25%; left:7%; top:auto; bottom:11%; z-index:2; transition-delay:.05s; }
 .hm-phone.p-r{ width:25%; left:68%; top:auto; bottom:11%; z-index:2; transition-delay:.1s; }
 
+/* Pinch cover: three phones pinned side by side; the left one sinks below the card edge,
+   the right one rises above it, each half hidden; the chef page stays whole in the middle */
+.hm-phones.hm-pinned{ container-type:size; --u:min(1cqw, 1.4cqh); --pw:calc(26 * var(--u)); --ph:calc(var(--pw) * 1165 / 571); }
+.hm-pinned .hm-phone{ width:var(--pw); bottom:auto; }
+.hm-pinned .hm-phone.p-c{ left:calc(50% - var(--pw) / 2); top:calc(50% - var(--ph) / 2); }
+.hm-pinned .hm-phone.p-l{ left:calc(50% - var(--pw) * 1.47); top:calc(100% - var(--ph) / 2); }
+.hm-pinned .hm-phone.p-r{ left:calc(50% + var(--pw) * .47); top:calc(var(--ph) / -2); }
+
 /* Kiddoz: two phones floating in the air */
 .hm-air{ background:none; }
 .hm-air .hm-phone::after{ filter:drop-shadow(0 30px 30px rgba(60,40,90,.28)); }
