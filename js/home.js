@@ -181,7 +181,6 @@
     if (!hero) return;
     hero.querySelectorAll(".hm-hello .lt").forEach(function (l, i) { l.style.setProperty("--n", i); });
     var note = hero.querySelector(".hm-note"), row = hero.querySelector(".hm-dots");
-    if (note && !reduce) note.classList.add("is-typing");
     var started = false;
     function go() {
       if (started) return; started = true;
@@ -190,12 +189,36 @@
       var dotsEnd = 0.25 + Math.max(0, n - 1) * 0.03 + 0.65;
       var nameDelay = Math.max(0.9, dotsEnd - 0.45);   /* starts while the last dots are still landing */
       hero.style.setProperty("--name-delay", nameDelay.toFixed(2) + "s");
+      hero.style.setProperty("--tag-delay", (nameDelay + 0.9).toFixed(2) + "s");   /* the tagline follows the name in */
+      startSwap((nameDelay + 0.9 + 1.7) * 1000 + 1000);
       hero.classList.add("hm-in");
       setTimeout(function () { if (row) row.classList.add("is-done"); }, dotsEnd * 1000 + 100);
-      if (note && !reduce) setTimeout(function () { typeNote(note); }, (nameDelay + 0.75) * 1000);   /* while "I'm Aviv" is halfway in */
     }
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { window.requestAnimationFrame(go); });
     setTimeout(go, 1200);
+  }
+
+  /* tagline: every 2.5s the last word is erased letter by letter, then the next one is typed in */
+  function startSwap(delay) {
+    var el = document.querySelector(".hm-swap");
+    if (!el) return;
+    var words = ["need.", "use.", "want.", "value.", "remember.", "enjoy."], i = 0;
+    function retype(word) {
+      if (reduce) { el.textContent = word; return; }
+      (function erase() {
+        var t = el.textContent;
+        if (t.length) { el.textContent = t.slice(0, -1); setTimeout(erase, 55); return; }
+        var k = 0;
+        (function type() {
+          if (k >= word.length) return;
+          el.textContent = word.slice(0, ++k);
+          setTimeout(type, 90);
+        })();
+      })();
+    }
+    setTimeout(function () {
+      setInterval(function () { i = (i + 1) % words.length; retype(words[i]); }, 2500);
+    }, Math.max(0, delay - 2500));
   }
 
   /* typewriter: letter by letter, with a blinking caret that leaves at the end */
